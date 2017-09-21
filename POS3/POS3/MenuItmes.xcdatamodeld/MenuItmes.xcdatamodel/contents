@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Menu" representedClassName="Menu" syncable="YES" codeGenerationType="class">
+        <attribute name="itemCategory" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemChineseName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemCode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemEnglishName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemNum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="Orders" representedClassName="Orders" syncable="YES" codeGenerationType="class">
+        <attribute name="orderAsCollection" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="orderComment" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="orderCustName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderDateAndTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="orderItemAddons" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="orderItems" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="orderNum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="orderPhoneNum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderPickupTime" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="orderPrice" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Menu" positionX="-45" positionY="0" width="128" height="135"/>
+        <element name="Orders" positionX="-45" positionY="27" width="128" height="195"/>
+    </elements>
+</model>
