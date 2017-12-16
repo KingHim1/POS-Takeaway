@@ -71,6 +71,7 @@
 		7E2E5DA91F743B99007D7C99 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2E5DA81F743B99007D7C99 /* SMCloudServices.framework */; };
 		7E2E5DAC1F743C9D007D7C99 /* CheckCancelOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5DAA1F743C9D007D7C99 /* CheckCancelOrderViewController.swift */; };
 		7E2E5DAD1F743C9D007D7C99 /* CheckPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5DAB1F743C9D007D7C99 /* CheckPrintViewController.swift */; };
+		7E7F39191F8CFF1700ADFC13 /* clearDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F39181F8CFF1700ADFC13 /* clearDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +143,7 @@
 		7E2E5DA81F743B99007D7C99 /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SMCloudServices.framework; path = Chine/SMCloudServices.framework; sourceTree = "<group>"; };
 		7E2E5DAA1F743C9D007D7C99 /* CheckCancelOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCancelOrderViewController.swift; sourceTree = "<group>"; };
 		7E2E5DAB1F743C9D007D7C99 /* CheckPrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPrintViewController.swift; sourceTree = "<group>"; };
+		7E7F39181F8CFF1700ADFC13 /* clearDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clearDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 		7E2E5D1B1F743962007D7C99 /* Chine */ = {
 			isa = PBXGroup;
 			children = (
+				7E7F39181F8CFF1700ADFC13 /* clearDatabase.swift */,
 				7E2E5DAA1F743C9D007D7C99 /* CheckCancelOrderViewController.swift */,
 				7E2E5DAB1F743C9D007D7C99 /* CheckPrintViewController.swift */,
 				7E2E5D401F743B11007D7C99 /* BridgingFile.m */,
@@ -341,6 +344,7 @@
 				7E2E5D841F743B11007D7C99 /* GermanReceiptsImpl.swift in Sources */,
 				7E2E5D8D1F743B11007D7C99 /* orderListTableCell.swift in Sources */,
 				7E2E5D921F743B12007D7C99 /* PortugueseReceiptsImpl.swift in Sources */,
+				7E7F39191F8CFF1700ADFC13 /* clearDatabase.swift in Sources */,
 				7E2E5D751F743B11007D7C99 /* CheckEditItemViewController.swift in Sources */,
 				7E2E5D961F743B12007D7C99 /* ScaleCommunication.swift in Sources */,
 				7E2E5D851F743B11007D7C99 /* ILocalizeReceipts.swift in Sources */,
@@ -568,6 +572,7 @@
 				7E2E5D301F743962007D7C99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
