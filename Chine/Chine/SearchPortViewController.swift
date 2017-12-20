@@ -88,9 +88,7 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         if cell != nil {
             let cellParam: [String] = self.cellArray[indexPath.row] as! [String]
             
-//          cell      .textLabel!.text = cellParam[CellParamIndex.portName.rawValue]
             cell      .textLabel!.text = cellParam[CellParamIndex.modelName.rawValue]
-//          cell.detailTextLabel!.text = cellParam[CellParamIndex.modelName.rawValue]
             
             if cellParam[CellParamIndex.macAddress.rawValue] == "" {
                 cell.detailTextLabel!.text = cellParam[CellParamIndex.portName.rawValue]
@@ -119,7 +117,6 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//      self.tableView.deselectRow(at: indexPath, animated: true)
         
         var cell: UITableViewCell!
         
@@ -139,77 +136,13 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         
         let cellParam: [String] = self.cellArray[self.selectedIndexPath.row] as! [String]
         
-//      let portName:   String = cellParam[CellParamIndex.portName  .rawValue]
         let modelName:  String = cellParam[CellParamIndex.modelName .rawValue]
-//      let macAddress: String = cellParam[CellParamIndex.macAddress.rawValue]
         
-        if false {     // Ex1. Direct Setting.
-//          let portSettings: String = ""
-//          let portSettings: String = "mini"
-//          let portSettings: String = "escpos"
-//          let portSettings: String = "Portable"
-//
-//          let emulation: StarIoExtEmulation = StarIoExtEmulation.starPRNT
-//          let emulation: StarIoExtEmulation = StarIoExtEmulation.starLine
-//          let emulation: StarIoExtEmulation = StarIoExtEmulation.starGraphic
-//          let emulation: StarIoExtEmulation = StarIoExtEmulation.escPos
-//          let emulation: StarIoExtEmulation = StarIoExtEmulation.escPosMobile
-//          let emulation: StarIoExtEmulation = StarIoExtEmulation.starDotImpact
-//
-//          AppDelegate.setPortName    (portName)
-//          AppDelegate.setModelName   (modelName)
-//          AppDelegate.setMacAddress  (macAddress)
-//          AppDelegate.setPortSettings(portSettings)
-//          AppDelegate.setEmulation   (emulation)
-//
-//          self.navigationController!.popViewController(animated: true)
+        if false {
         }
-        else if false {     // Ex2. Direct Setting.
-//          let modelIndex: ModelIndex = ModelIndex.mpop
-//          let modelIndex: ModelIndex = ModelIndex.fvp10
-//          let modelIndex: ModelIndex = ModelIndex.tsp100
-//          let modelIndex: ModelIndex = ModelIndex.tsp650II
-//          let modelIndex: ModelIndex = ModelIndex.tsp700II
-//          let modelIndex: ModelIndex = ModelIndex.tsp800II
-//          let modelIndex: ModelIndex = ModelIndex.sm_S210I
-//          let modelIndex: ModelIndex = ModelIndex.sm_S220I
-//          let modelIndex: ModelIndex = ModelIndex.sm_S230I
-//          let modelIndex: ModelIndex = ModelIndex.sm_T300I
-//          let modelIndex: ModelIndex = ModelIndex.sm_T400I
-//          let modelIndex: ModelIndex = ModelIndex.bsc10
-//          let modelIndex: ModelIndex = ModelIndex.sm_S210I_StarPRNT
-//          let modelIndex: ModelIndex = ModelIndex.sm_S220I_StarPRNT
-//          let modelIndex: ModelIndex = ModelIndex.sm_S230I_StarPRNT
-//          let modelIndex: ModelIndex = ModelIndex.sm_T300I_StarPRNT
-//          let modelIndex: ModelIndex = ModelIndex.sm_T400I_StarPRNT
-//          let modelIndex: ModelIndex = ModelIndex.sm_L200
-//          let modelIndex: ModelIndex = ModelIndex.sp700
-//          let modelIndex: ModelIndex = ModelIndex.sm_L300
-//
-//          let portSettings: String             = ModelCapability.portSettingsAtModelIndex(modelIndex)
-//          let emulation:    StarIoExtEmulation = ModelCapability.emulationAtModelIndex   (modelIndex)
-//
-//          AppDelegate.setPortName    (portName)
-//          AppDelegate.setModelName   (modelName)
-//          AppDelegate.setMacAddress  (macAddress)
-//          AppDelegate.setPortSettings(portSettings)
-//          AppDelegate.setEmulation   (emulation)
-//
-//          self.navigationController!.popViewController(animated: true)
+        else if false {
         }
-        else if false {     // Ex3. Indirect Setting.
-//          let modelIndex: ModelIndex = ModelCapability.modelIndexAtModelName(modelName)
-//
-//          let portSettings: String             = ModelCapability.portSettingsAtModelIndex(modelIndex)
-//          let emulation:    StarIoExtEmulation = ModelCapability.emulationAtModelIndex   (modelIndex)
-//
-//          AppDelegate.setPortName    (portName)
-//          AppDelegate.setModelName   (modelName)
-//          AppDelegate.setMacAddress  (macAddress)
-//          AppDelegate.setPortSettings(portSettings)
-//          AppDelegate.setEmulation   (emulation)
-//
-//          self.navigationController!.popViewController(animated: true)
+        else if false {     
         }
         else {     // Ex4. Indirect Setting.
             let modelIndex: ModelIndex = ModelCapability.modelIndexAtModelName(modelName)
@@ -228,8 +161,7 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
                 let alertView: UIAlertController = UIAlertController.init(title: "Confirm", message: "What is your printer?", preferredStyle: .actionSheet)
                 for i: Int in 0 ..< ModelCapability.modelIndexCount() {
                     let action = UIAlertAction(title: ModelCapability.titleAtModelIndex(ModelCapability.modelIndexAtIndex(i)), style: UIAlertActionStyle.default, handler: {action in self.modelSelect0(buttonIndex: i)})
-//                    alertView.addButton(withTitle: ModelCapability.titleAtModelIndex(ModelCapability.modelIndexAtIndex(i)))
-//                    alertView.view.addSubview(button)
+
                     alertView.addAction(action)
                 }
                 alertView.popoverPresentationController?.sourceView = self.view
@@ -241,22 +173,22 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         }
     }
     
-    func refreshPortInfo() {
+    @objc func refreshPortInfo() {
         
         let alertView: UIAlertController = UIAlertController.init(title: "Select Interface", message: "", preferredStyle: .alert)
         let cancelButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let lanButton: UIAlertAction = UIAlertAction(title: "LAN", style: .default, handler: nil)
+//        let lanButton: UIAlertAction = UIAlertAction(title: "LAN", style: .default, handler: nil)
         let blueButton: UIAlertAction = UIAlertAction(title: "Bluetooth", style: .default, handler: {action in self.netType( alertView, didDismissWithButtonIndex: 2)})
-        let blueLowButton: UIAlertAction = UIAlertAction(title: "Bluetooth Low Energy", style: .default, handler: nil)
-        let USBButton: UIAlertAction = UIAlertAction(title: "USB", style: .default, handler: nil)
-        let AllButton: UIAlertAction = UIAlertAction(title: "All", style: .default, handler: nil)
+//        let blueLowButton: UIAlertAction = UIAlertAction(title: "Bluetooth Low Energy", style: .default, handler: nil)
+//        let USBButton: UIAlertAction = UIAlertAction(title: "USB", style: .default, handler: nil)
+//        let AllButton: UIAlertAction = UIAlertAction(title: "All", style: .default, handler: nil)
         let ManButton: UIAlertAction = UIAlertAction(title: "Manual", style: .default, handler: nil)
         alertView.addAction(cancelButton)
-        alertView.addAction(lanButton)
+//        alertView.addAction(lanButton)
         alertView.addAction(blueButton)
-        alertView.addAction(blueLowButton)
-        alertView.addAction(USBButton)
-        alertView.addAction(AllButton)
+//        alertView.addAction(blueLowButton)
+//        alertView.addAction(USBButton)
+//        alertView.addAction(AllButton)
         alertView.addAction(ManButton)
         alertView.view.tag = AlertViewIndex.refreshPort.rawValue
         
@@ -368,10 +300,10 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         
         if ModelCapability.cashDrawerOpenActiveAtModelIndex(modelIndex) == true {
             let nestAlertView: UIAlertController = UIAlertController.init(title: "Select CashDrawer Open Status.", message: "", preferredStyle: .actionSheet)
-            let actionCashAHT = UIAlertAction(title: "High When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 1)})
-            let actionCashAHF = UIAlertAction(title: "Low When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 2)})
-            nestAlertView.addAction(actionCashAHT)
-            nestAlertView.addAction(actionCashAHF)
+//            let actionCashAHT = UIAlertAction(title: "High When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 1)})
+//            let actionCashAHF = UIAlertAction(title: "Low When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 2)})
+//            nestAlertView.addAction(actionCashAHT)
+//            nestAlertView.addAction(actionCashAHF)
             
             nestAlertView.popoverPresentationController?.sourceView = self.view
             nestAlertView.view.tag = AlertViewIndex.cashDrawerOpenActive.rawValue
@@ -402,10 +334,10 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             
             if ModelCapability.cashDrawerOpenActiveAtModelIndex(modelIndex) == true {
                 let nestAlertView: UIAlertController = UIAlertController.init(title: "Select CashDrawer Open Status.", message: "", preferredStyle: .actionSheet)
-                let actionCashAHT = UIAlertAction(title: "High When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 1)})
-                let actionCashAHF = UIAlertAction(title: "Low When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 2)})
-                nestAlertView.addAction(actionCashAHT)
-                nestAlertView.addAction(actionCashAHF)
+//                let actionCashAHT = UIAlertAction(title: "High When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 1)})
+//                let actionCashAHF = UIAlertAction(title: "Low When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 2)})
+//                nestAlertView.addAction(actionCashAHT)
+//                nestAlertView.addAction(actionCashAHF)
                 
                 nestAlertView.view.tag = AlertViewIndex.cashDrawerOpenActive.rawValue
                 
@@ -424,25 +356,25 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             }
         
     }
-    
-    func cashDrawOpen(buttonIndex: Int){
-            AppDelegate.setPortName    (self.portName)
-            AppDelegate.setPortSettings(self.portSettings)
-            AppDelegate.setModelName   (self.modelName)
-            AppDelegate.setMacAddress  (self.macAddress)
-            AppDelegate.setEmulation   (self.emulation)
-            
-            if buttonIndex == 1 {     // High when Open
-                AppDelegate.setCashDrawerOpenActiveHigh(true)
-            }
-            else if buttonIndex == 2 {     // Low when Open
-                AppDelegate.setCashDrawerOpenActiveHigh(false)
-            }
-            
-        
-            self.navigationController!.popViewController(animated: true)
-        }
-    // ----------------------------------------------------- bottom is not my stuff
+//
+//    func cashDrawOpen(buttonIndex: Int){
+//            AppDelegate.setPortName    (self.portName)
+//            AppDelegate.setPortSettings(self.portSettings)
+//            AppDelegate.setModelName   (self.modelName)
+//            AppDelegate.setMacAddress  (self.macAddress)
+//            AppDelegate.setEmulation   (self.emulation)
+//
+//            if buttonIndex == 1 {     // High when Open
+//                AppDelegate.setCashDrawerOpenActiveHigh(true)
+//            }
+//            else if buttonIndex == 2 {     // Low when Open
+//                AppDelegate.setCashDrawerOpenActiveHigh(false)
+//            }
+//
+//
+//            self.navigationController!.popViewController(animated: true)
+//        }
+//    // ----------------------------------------------------- bottom is not my stuff
     
     
     private func netType(_ alertView: UIAlertController, didDismissWithButtonIndex buttonIndex: Int) {

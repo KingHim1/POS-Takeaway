@@ -44,17 +44,17 @@ class OrderListTableViewController: UITableViewController{
         let allOrders: [(Int, [Int], Date, String, String, String, Int, Bool)]  = getAllOrders()
         
         cell.orderNumber!.text = ("\(allOrders[row].0)")
-        if let price =  String(allOrders[row].3){
-            cell.orderPrice!.text! = ("£") + price
-        }
+        let price =  (allOrders[row].3)
+        cell.orderPrice!.text! = ("£") + price
+        
         
         cell.orderDate!.text! = formatter.string(from: allOrders[row].2) 
-        if let name = String(allOrders[row].4){
-            cell.orderCustomerName!.text! = name
-        }
-        if let phone = String(allOrders[row].5){
+        let name = (allOrders[row].4)
+        cell.orderCustomerName!.text! = name
+        
+        let phone = (allOrders[row].5)
         cell.orderCustomerPhone!.text! = phone
-        }
+        
         
         cell.restorationIdentifier = ("\(getAllOrderNumbers()[row])")
                 return cell

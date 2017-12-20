@@ -97,7 +97,7 @@ class AddOnViewController: UIViewController{
         return myButton
     }
     
-    func toggleAddOn(sender: UIButton){
+    @objc func toggleAddOn(sender: UIButton){
         let allAddons = getAllAddOnOptions()
         var listOfJustItems:[Int] = []
         for x in 0 ..< itemNum{

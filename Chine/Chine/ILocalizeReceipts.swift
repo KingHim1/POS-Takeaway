@@ -166,11 +166,11 @@ class ILocalizeReceipts {
     }
     
     static func imageWithString(_ string: String, font: UIFont, width: CGFloat) -> UIImage {
-        let attributeDic: NSDictionary = NSDictionary(dictionary: [NSFontAttributeName : font])
+        let attributeDic: NSDictionary = NSDictionary(dictionary: [NSAttributedStringKey.font : font])
         
         let stringDrawingOptions: NSStringDrawingOptions = [NSStringDrawingOptions.usesLineFragmentOrigin, NSStringDrawingOptions.truncatesLastVisibleLine]
         
-        let size: CGSize = (string.boundingRect(with: CGSize(width: width, height: 10000), options: stringDrawingOptions, attributes: attributeDic as? [String : AnyObject], context: nil)).size
+        let size: CGSize = (string.boundingRect(with: CGSize(width: width, height: 10000), options: stringDrawingOptions, attributes: attributeDic as? [NSAttributedStringKey : Any], context: nil)).size
         
         if UIScreen.main.responds(to: #selector(NSDecimalNumberBehaviors.scale)) {
             if UIScreen.main.scale == 2.0 {
@@ -190,9 +190,9 @@ class ILocalizeReceipts {
         
         context.fill(rect)
         
-        let attributes: NSDictionary = NSDictionary(dictionary: [NSForegroundColorAttributeName : UIColor.black, NSFontAttributeName : font])
+        let attributes: NSDictionary = NSDictionary(dictionary: [NSAttributedStringKey.foregroundColor : UIColor.black, NSAttributedStringKey.font : font])
         
-        string.draw(in: rect, withAttributes: attributes as? [String : AnyObject])
+        string.draw(in: rect, withAttributes: attributes as? [NSAttributedStringKey : Any])
         
         let imageToPrint: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         

@@ -524,6 +524,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BJg-Ln-0tI">
                         <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -660,16 +661,16 @@
                                 <rect key="frame" x="16" y="30" width="322" height="545.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-7N-O4H">
-                                        <rect key="frame" x="0.0" y="0.0" width="322" height="5.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="322" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nym-a8-0XX">
-                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="5.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LXD-qp-EWL">
-                                                <rect key="frame" x="139.5" y="0.0" width="182.5" height="5.5"/>
+                                                <rect key="frame" x="139.5" y="0.0" width="182.5" height="30"/>
                                                 <color key="backgroundColor" red="0.87353267769999998" green="0.10105764" blue="0.15016226669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Remove">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -681,7 +682,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t0g-Rk-qeB">
-                                        <rect key="frame" x="0.0" y="15.5" width="322" height="530"/>
+                                        <rect key="frame" x="0.0" y="40" width="322" height="505.5"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -757,7 +758,7 @@
                             <constraint firstItem="j4W-TM-K4p" firstAttribute="top" secondItem="TLN-Pp-ntT" secondAttribute="bottom" id="wZO-2i-3ye"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Connection" id="NOY-PT-KQz"/>
+                    <tabBarItem key="tabBarItem" title="Connection" image="Image-1" selectedImage="Image-1" id="NOY-PT-KQz"/>
                     <connections>
                         <outlet property="activityIndicatorView" destination="T1J-rO-otO" id="2dS-NS-tUq"/>
                         <outlet property="blindView" destination="TLN-Pp-ntT" id="kIl-CT-R5w"/>
@@ -906,7 +907,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="rjx-SE-6jB" secondAttribute="trailing" constant="20" id="piD-C5-8eC"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add Item" image="➕" selectedImage="➕" id="D7Z-cl-ca0"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Add Item" image="Image" selectedImage="Image" id="D7Z-cl-ca0"/>
                     <connections>
                         <outlet property="addButton" destination="AHa-Rh-8O0" id="UeC-Au-DXs"/>
                         <outlet property="itemCat" destination="riH-dr-uTN" id="aMV-PC-kBf"/>
@@ -984,7 +985,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="BMs-Ph-Y8e" secondAttribute="leading" id="pw3-aI-Sag"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Edit Item" id="Qa1-bf-1vG"/>
+                    <tabBarItem key="tabBarItem" title="Edit Item" image="Image-2" selectedImage="Image-2" id="Qa1-bf-1vG"/>
                     <connections>
                         <outlet property="editIemsTable" destination="BkU-lT-XVa" id="ReC-Ws-kki"/>
                         <outlet property="editItemTitle" destination="uiv-VG-CRF" id="T7L-Sb-s9o"/>
@@ -1004,6 +1005,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.8357392132" green="0.096685372780000001" blue="0.14366548370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.8357392132" green="0.096685372780000001" blue="0.14366548370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="wLt-sW-mKK" kind="relationship" relationship="viewControllers" id="BqR-EC-Mny"/>
@@ -2091,6 +2094,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="➕" width="16" height="16"/>
+        <image name="Image" width="24" height="24"/>
+        <image name="Image-1" width="24" height="24"/>
+        <image name="Image-2" width="24" height="24"/>
     </resources>
 </document>

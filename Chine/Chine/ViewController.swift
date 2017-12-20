@@ -133,7 +133,7 @@ class ViewController: UIViewController {
         segmentedControl.selectedSegmentIndex = 0
     }
     
-    func selectionDidChange(_ sender: UISegmentedControl) {
+    @objc func selectionDidChange(_ sender: UISegmentedControl) {
         updateView()
     }
     

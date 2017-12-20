@@ -8,12 +8,13 @@
 
 import Foundation
 
-class ScaleFunctions {
-    static func appendZeroClear(builder: ISSCBBuilder) {
-        builder.appendZeroClear()
-    }
-    
-    static func appendUnitChange(builder: ISSCBBuilder) {
-        builder.appendUnitChange()
-    }
-}
+//class ScaleFunctions {
+//    static func appendZeroClear(builder: ISSCBBuilder) {
+//        builder.appendZeroClear()
+//    }
+//    
+//    static func appendUnitChange(builder: ISSCBBuilder) {
+//        builder.appendUnitChange()
+//    }
+//}
+
