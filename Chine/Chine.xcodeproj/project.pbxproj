@@ -17,20 +17,15 @@
 		7E2E5D3A1F743B05007D7C99 /* AddOnCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D331F743B05007D7C99 /* AddOnCollectionViewController.swift */; };
 		7E2E5D3B1F743B05007D7C99 /* addonTableLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D341F743B05007D7C99 /* addonTableLayout.swift */; };
 		7E2E5D3C1F743B05007D7C99 /* AddOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D351F743B05007D7C99 /* AddOnViewController.swift */; };
-		7E2E5D3D1F743B05007D7C99 /* AllReceiptsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D361F743B05007D7C99 /* AllReceiptsFunctions.swift */; };
-		7E2E5D3E1F743B05007D7C99 /* ApiFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D371F743B05007D7C99 /* ApiFunctions.swift */; };
 		7E2E5D711F743B11007D7C99 /* BridgingFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D401F743B11007D7C99 /* BridgingFile.m */; };
-		7E2E5D721F743B11007D7C99 /* CashDrawerFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D411F743B11007D7C99 /* CashDrawerFunctions.swift */; };
 		7E2E5D731F743B11007D7C99 /* checkAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D421F743B11007D7C99 /* checkAddItemViewController.swift */; };
 		7E2E5D741F743B11007D7C99 /* CheckDeleteItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D431F743B11007D7C99 /* CheckDeleteItemViewController.swift */; };
 		7E2E5D751F743B11007D7C99 /* CheckEditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D441F743B11007D7C99 /* CheckEditItemViewController.swift */; };
-		7E2E5D771F743B11007D7C99 /* CombinationFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D471F743B11007D7C99 /* CombinationFunctions.swift */; };
 		7E2E5D781F743B11007D7C99 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D481F743B11007D7C99 /* CommonViewController.swift */; };
 		7E2E5D791F743B11007D7C99 /* Communication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D491F743B11007D7C99 /* Communication.swift */; };
 		7E2E5D7A1F743B11007D7C99 /* ConfigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D4A1F743B11007D7C99 /* ConfigController.swift */; };
 		7E2E5D7B1F743B11007D7C99 /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D4B1F743B11007D7C99 /* ConfigurationViewController.swift */; };
 		7E2E5D7C1F743B11007D7C99 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D4C1F743B11007D7C99 /* Data.swift */; };
-		7E2E5D7D1F743B11007D7C99 /* DisplayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D4D1F743B11007D7C99 /* DisplayFunctions.swift */; };
 		7E2E5D7E1F743B11007D7C99 /* EditItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D4E1F743B11007D7C99 /* EditItemTableViewCell.swift */; };
 		7E2E5D7F1F743B11007D7C99 /* EditItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D4F1F743B11007D7C99 /* EditItemTableViewController.swift */; };
 		7E2E5D801F743B11007D7C99 /* editItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D501F743B11007D7C99 /* editItemViewController.swift */; };
@@ -55,8 +50,6 @@
 		7E2E5D931F743B12007D7C99 /* PrinterFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D651F743B11007D7C99 /* PrinterFunctions.swift */; };
 		7E2E5D941F743B12007D7C99 /* PrinterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D661F743B11007D7C99 /* PrinterModel.swift */; };
 		7E2E5D951F743B12007D7C99 /* RussianReceiptsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D671F743B11007D7C99 /* RussianReceiptsImpl.swift */; };
-		7E2E5D961F743B12007D7C99 /* ScaleCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D681F743B11007D7C99 /* ScaleCommunication.swift */; };
-		7E2E5D971F743B12007D7C99 /* ScaleFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D691F743B11007D7C99 /* ScaleFunctions.swift */; };
 		7E2E5D981F743B12007D7C99 /* SearchPortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D6A1F743B11007D7C99 /* SearchPortViewController.swift */; };
 		7E2E5D991F743B12007D7C99 /* SimplifiedChineseReceiptsImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D6B1F743B11007D7C99 /* SimplifiedChineseReceiptsImpl.swift */; };
 		7E2E5D9A1F743B12007D7C99 /* SMDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D6C1F743B11007D7C99 /* SMDefine.swift */; };
@@ -87,21 +80,16 @@
 		7E2E5D331F743B05007D7C99 /* AddOnCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOnCollectionViewController.swift; sourceTree = "<group>"; };
 		7E2E5D341F743B05007D7C99 /* addonTableLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addonTableLayout.swift; sourceTree = "<group>"; };
 		7E2E5D351F743B05007D7C99 /* AddOnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddOnViewController.swift; sourceTree = "<group>"; };
-		7E2E5D361F743B05007D7C99 /* AllReceiptsFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllReceiptsFunctions.swift; sourceTree = "<group>"; };
-		7E2E5D371F743B05007D7C99 /* ApiFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiFunctions.swift; sourceTree = "<group>"; };
 		7E2E5D3F1F743B11007D7C99 /* Chine-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chine-Bridging-Header.h"; sourceTree = "<group>"; };
 		7E2E5D401F743B11007D7C99 /* BridgingFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgingFile.m; sourceTree = "<group>"; };
-		7E2E5D411F743B11007D7C99 /* CashDrawerFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashDrawerFunctions.swift; sourceTree = "<group>"; };
 		7E2E5D421F743B11007D7C99 /* checkAddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkAddItemViewController.swift; sourceTree = "<group>"; };
 		7E2E5D431F743B11007D7C99 /* CheckDeleteItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckDeleteItemViewController.swift; sourceTree = "<group>"; };
 		7E2E5D441F743B11007D7C99 /* CheckEditItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckEditItemViewController.swift; sourceTree = "<group>"; };
-		7E2E5D471F743B11007D7C99 /* CombinationFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinationFunctions.swift; sourceTree = "<group>"; };
 		7E2E5D481F743B11007D7C99 /* CommonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
 		7E2E5D491F743B11007D7C99 /* Communication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Communication.swift; sourceTree = "<group>"; };
 		7E2E5D4A1F743B11007D7C99 /* ConfigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigController.swift; sourceTree = "<group>"; };
 		7E2E5D4B1F743B11007D7C99 /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		7E2E5D4C1F743B11007D7C99 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		7E2E5D4D1F743B11007D7C99 /* DisplayFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayFunctions.swift; sourceTree = "<group>"; };
 		7E2E5D4E1F743B11007D7C99 /* EditItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemTableViewCell.swift; sourceTree = "<group>"; };
 		7E2E5D4F1F743B11007D7C99 /* EditItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemTableViewController.swift; sourceTree = "<group>"; };
 		7E2E5D501F743B11007D7C99 /* editItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editItemViewController.swift; sourceTree = "<group>"; };
@@ -127,8 +115,6 @@
 		7E2E5D651F743B11007D7C99 /* PrinterFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterFunctions.swift; sourceTree = "<group>"; };
 		7E2E5D661F743B11007D7C99 /* PrinterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrinterModel.swift; sourceTree = "<group>"; };
 		7E2E5D671F743B11007D7C99 /* RussianReceiptsImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RussianReceiptsImpl.swift; sourceTree = "<group>"; };
-		7E2E5D681F743B11007D7C99 /* ScaleCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleCommunication.swift; sourceTree = "<group>"; };
-		7E2E5D691F743B11007D7C99 /* ScaleFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleFunctions.swift; sourceTree = "<group>"; };
 		7E2E5D6A1F743B11007D7C99 /* SearchPortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPortViewController.swift; sourceTree = "<group>"; };
 		7E2E5D6B1F743B11007D7C99 /* SimplifiedChineseReceiptsImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplifiedChineseReceiptsImpl.swift; sourceTree = "<group>"; };
 		7E2E5D6C1F743B11007D7C99 /* SMDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMDefine.swift; sourceTree = "<group>"; };
@@ -186,17 +172,14 @@
 				7E2E5DAA1F743C9D007D7C99 /* CheckCancelOrderViewController.swift */,
 				7E2E5DAB1F743C9D007D7C99 /* CheckPrintViewController.swift */,
 				7E2E5D401F743B11007D7C99 /* BridgingFile.m */,
-				7E2E5D411F743B11007D7C99 /* CashDrawerFunctions.swift */,
 				7E2E5D421F743B11007D7C99 /* checkAddItemViewController.swift */,
 				7E2E5D431F743B11007D7C99 /* CheckDeleteItemViewController.swift */,
 				7E2E5D441F743B11007D7C99 /* CheckEditItemViewController.swift */,
-				7E2E5D471F743B11007D7C99 /* CombinationFunctions.swift */,
 				7E2E5D481F743B11007D7C99 /* CommonViewController.swift */,
 				7E2E5D491F743B11007D7C99 /* Communication.swift */,
 				7E2E5D4A1F743B11007D7C99 /* ConfigController.swift */,
 				7E2E5D4B1F743B11007D7C99 /* ConfigurationViewController.swift */,
 				7E2E5D4C1F743B11007D7C99 /* Data.swift */,
-				7E2E5D4D1F743B11007D7C99 /* DisplayFunctions.swift */,
 				7E2E5D4E1F743B11007D7C99 /* EditItemTableViewCell.swift */,
 				7E2E5D4F1F743B11007D7C99 /* EditItemTableViewController.swift */,
 				7E2E5D501F743B11007D7C99 /* editItemViewController.swift */,
@@ -222,8 +205,6 @@
 				7E2E5D651F743B11007D7C99 /* PrinterFunctions.swift */,
 				7E2E5D661F743B11007D7C99 /* PrinterModel.swift */,
 				7E2E5D671F743B11007D7C99 /* RussianReceiptsImpl.swift */,
-				7E2E5D681F743B11007D7C99 /* ScaleCommunication.swift */,
-				7E2E5D691F743B11007D7C99 /* ScaleFunctions.swift */,
 				7E2E5D6A1F743B11007D7C99 /* SearchPortViewController.swift */,
 				7E2E5D6B1F743B11007D7C99 /* SimplifiedChineseReceiptsImpl.swift */,
 				7E2E5D6C1F743B11007D7C99 /* SMDefine.swift */,
@@ -236,8 +217,6 @@
 				7E2E5D331F743B05007D7C99 /* AddOnCollectionViewController.swift */,
 				7E2E5D341F743B05007D7C99 /* addonTableLayout.swift */,
 				7E2E5D351F743B05007D7C99 /* AddOnViewController.swift */,
-				7E2E5D361F743B05007D7C99 /* AllReceiptsFunctions.swift */,
-				7E2E5D371F743B05007D7C99 /* ApiFunctions.swift */,
 				7E2E5D1C1F743962007D7C99 /* AppDelegate.swift */,
 				7E2E5D1E1F743962007D7C99 /* ViewController.swift */,
 				7E2E5D201F743962007D7C99 /* Main.storyboard */,
@@ -338,15 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E2E5D971F743B12007D7C99 /* ScaleFunctions.swift in Sources */,
-				7E2E5D3E1F743B05007D7C99 /* ApiFunctions.swift in Sources */,
 				7E2E5D831F743B11007D7C99 /* FrenchReceiptsImpl.swift in Sources */,
 				7E2E5D841F743B11007D7C99 /* GermanReceiptsImpl.swift in Sources */,
 				7E2E5D8D1F743B11007D7C99 /* orderListTableCell.swift in Sources */,
 				7E2E5D921F743B12007D7C99 /* PortugueseReceiptsImpl.swift in Sources */,
 				7E7F39191F8CFF1700ADFC13 /* clearDatabase.swift in Sources */,
 				7E2E5D751F743B11007D7C99 /* CheckEditItemViewController.swift in Sources */,
-				7E2E5D961F743B12007D7C99 /* ScaleCommunication.swift in Sources */,
 				7E2E5D851F743B11007D7C99 /* ILocalizeReceipts.swift in Sources */,
 				7E2E5D3C1F743B05007D7C99 /* AddOnViewController.swift in Sources */,
 				7E2E5D941F743B12007D7C99 /* PrinterModel.swift in Sources */,
@@ -355,11 +331,9 @@
 				7E2E5D3A1F743B05007D7C99 /* AddOnCollectionViewController.swift in Sources */,
 				7E2E5DAC1F743C9D007D7C99 /* CheckCancelOrderViewController.swift in Sources */,
 				7E2E5D891F743B11007D7C99 /* Chine.xcdatamodeld in Sources */,
-				7E2E5D7D1F743B11007D7C99 /* DisplayFunctions.swift in Sources */,
 				7E2E5D731F743B11007D7C99 /* checkAddItemViewController.swift in Sources */,
 				7E2E5D381F743B05007D7C99 /* AddItemViewController.swift in Sources */,
 				7E2E5D951F743B12007D7C99 /* RussianReceiptsImpl.swift in Sources */,
-				7E2E5D771F743B11007D7C99 /* CombinationFunctions.swift in Sources */,
 				7E2E5D8A1F743B11007D7C99 /* ModelCapability.swift in Sources */,
 				7E2E5D861F743B11007D7C99 /* JapaneseReceiptsImpl.swift in Sources */,
 				7E2E5D981F743B12007D7C99 /* SearchPortViewController.swift in Sources */,
@@ -384,9 +358,7 @@
 				7E2E5D7C1F743B11007D7C99 /* Data.swift in Sources */,
 				7E2E5D741F743B11007D7C99 /* CheckDeleteItemViewController.swift in Sources */,
 				7E2E5D3B1F743B05007D7C99 /* addonTableLayout.swift in Sources */,
-				7E2E5D721F743B11007D7C99 /* CashDrawerFunctions.swift in Sources */,
 				7E2E5D391F743B05007D7C99 /* AddOnCollectionViewCell.swift in Sources */,
-				7E2E5D3D1F743B05007D7C99 /* AllReceiptsFunctions.swift in Sources */,
 				7E2E5D8E1F743B11007D7C99 /* OrderListTableViewController.swift in Sources */,
 				7E2E5D811F743B11007D7C99 /* EditOrDeleteItemViewController.swift in Sources */,
 				7E2E5D7E1F743B11007D7C99 /* EditItemTableViewCell.swift in Sources */,
