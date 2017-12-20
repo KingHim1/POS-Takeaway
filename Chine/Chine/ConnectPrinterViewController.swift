@@ -13,6 +13,7 @@ class ConnectPrinterViewController: UIViewController{
     override func viewDidLoad()  {
         //find printers
         //add to table and highlight if printer is already connected to
+        var foundPrinters = SMPort.searchPrinter("BT:") as? [PortInfo]
     }
 
     
