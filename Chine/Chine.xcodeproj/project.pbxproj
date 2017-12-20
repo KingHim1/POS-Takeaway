@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0DC95A1FEAE2C0007CBC19 /* ConnectPrinterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DC9591FEAE2C0007CBC19 /* ConnectPrinterViewController.swift */; };
 		7E2E5D1D1F743962007D7C99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D1C1F743962007D7C99 /* AppDelegate.swift */; };
 		7E2E5D1F1F743962007D7C99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5D1E1F743962007D7C99 /* ViewController.swift */; };
 		7E2E5D221F743962007D7C99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2E5D201F743962007D7C99 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E0DC9591FEAE2C0007CBC19 /* ConnectPrinterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectPrinterViewController.swift; sourceTree = "<group>"; };
 		7E2E5D191F743962007D7C99 /* Chine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2E5D1C1F743962007D7C99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E2E5D1E1F743962007D7C99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				7E2E5D4F1F743B11007D7C99 /* EditItemTableViewController.swift */,
 				7E2E5D501F743B11007D7C99 /* editItemViewController.swift */,
 				7E2E5D511F743B11007D7C99 /* EditOrDeleteItemViewController.swift */,
+				7E0DC9591FEAE2C0007CBC19 /* ConnectPrinterViewController.swift */,
 				7E2E5D521F743B11007D7C99 /* EnglishReceiptsImpl.swift */,
 				7E2E5D531F743B11007D7C99 /* FrenchReceiptsImpl.swift */,
 				7E2E5D541F743B11007D7C99 /* GermanReceiptsImpl.swift */,
@@ -335,6 +338,7 @@
 				7E2E5D381F743B05007D7C99 /* AddItemViewController.swift in Sources */,
 				7E2E5D951F743B12007D7C99 /* RussianReceiptsImpl.swift in Sources */,
 				7E2E5D8A1F743B11007D7C99 /* ModelCapability.swift in Sources */,
+				7E0DC95A1FEAE2C0007CBC19 /* ConnectPrinterViewController.swift in Sources */,
 				7E2E5D861F743B11007D7C99 /* JapaneseReceiptsImpl.swift in Sources */,
 				7E2E5D981F743B12007D7C99 /* SearchPortViewController.swift in Sources */,
 				7E2E5D781F743B11007D7C99 /* CommonViewController.swift in Sources */,

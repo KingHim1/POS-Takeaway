@@ -300,10 +300,6 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         
         if ModelCapability.cashDrawerOpenActiveAtModelIndex(modelIndex) == true {
             let nestAlertView: UIAlertController = UIAlertController.init(title: "Select CashDrawer Open Status.", message: "", preferredStyle: .actionSheet)
-//            let actionCashAHT = UIAlertAction(title: "High When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 1)})
-//            let actionCashAHF = UIAlertAction(title: "Low When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 2)})
-//            nestAlertView.addAction(actionCashAHT)
-//            nestAlertView.addAction(actionCashAHF)
             
             nestAlertView.popoverPresentationController?.sourceView = self.view
             nestAlertView.view.tag = AlertViewIndex.cashDrawerOpenActive.rawValue
@@ -334,10 +330,6 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             
             if ModelCapability.cashDrawerOpenActiveAtModelIndex(modelIndex) == true {
                 let nestAlertView: UIAlertController = UIAlertController.init(title: "Select CashDrawer Open Status.", message: "", preferredStyle: .actionSheet)
-//                let actionCashAHT = UIAlertAction(title: "High When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 1)})
-//                let actionCashAHF = UIAlertAction(title: "Low When Open", style: .default, handler: {action in self.cashDrawOpen(buttonIndex: 2)})
-//                nestAlertView.addAction(actionCashAHT)
-//                nestAlertView.addAction(actionCashAHF)
                 
                 nestAlertView.view.tag = AlertViewIndex.cashDrawerOpenActive.rawValue
                 
@@ -356,26 +348,6 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             }
         
     }
-//
-//    func cashDrawOpen(buttonIndex: Int){
-//            AppDelegate.setPortName    (self.portName)
-//            AppDelegate.setPortSettings(self.portSettings)
-//            AppDelegate.setModelName   (self.modelName)
-//            AppDelegate.setMacAddress  (self.macAddress)
-//            AppDelegate.setEmulation   (self.emulation)
-//
-//            if buttonIndex == 1 {     // High when Open
-//                AppDelegate.setCashDrawerOpenActiveHigh(true)
-//            }
-//            else if buttonIndex == 2 {     // Low when Open
-//                AppDelegate.setCashDrawerOpenActiveHigh(false)
-//            }
-//
-//
-//            self.navigationController!.popViewController(animated: true)
-//        }
-//    // ----------------------------------------------------- bottom is not my stuff
-    
     
     private func netType(_ alertView: UIAlertController, didDismissWithButtonIndex buttonIndex: Int) {
         if alertView.view.tag == AlertViewIndex.refreshPort.rawValue {
