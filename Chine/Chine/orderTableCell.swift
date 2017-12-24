@@ -11,6 +11,7 @@ import UIKit
 class OrderTableCell: UITableViewCell{
 
     
+    @IBOutlet weak var itemQuantity: UILabel!
     @IBOutlet weak var itemComment: UILabel!
     @IBOutlet weak var itemsPrice: UILabel!
     @IBOutlet weak var itemName: UILabel!

@@ -298,15 +298,8 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         self.portSettings = ModelCapability.portSettingsAtModelIndex(modelIndex)
         self.emulation    = ModelCapability.emulationAtModelIndex   (modelIndex)
         
-        if ModelCapability.cashDrawerOpenActiveAtModelIndex(modelIndex) == true {
-            let nestAlertView: UIAlertController = UIAlertController.init(title: "Select CashDrawer Open Status.", message: "", preferredStyle: .actionSheet)
-            
-            nestAlertView.popoverPresentationController?.sourceView = self.view
-            nestAlertView.view.tag = AlertViewIndex.cashDrawerOpenActive.rawValue
-            
-            self.present(nestAlertView, animated: true, completion: nil)
-        }
-        else {
+    
+        
             AppDelegate.setPortName                (self.portName)
             AppDelegate.setPortSettings            (self.portSettings)
             AppDelegate.setModelName               (self.modelName)
@@ -316,7 +309,7 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             
             
             self.navigationController!.popViewController(animated: true)
-        }
+        
     }
     
     func modelSelect1(buttonIndex: Int){
@@ -327,25 +320,17 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
             self.macAddress   = self.portSettings                                        // for display.
             //              self.portSettings = ModelCapability.portSettingsAtModelIndex(modelIndex)
             self.emulation    = ModelCapability.emulationAtModelIndex   (modelIndex)
-            
-            if ModelCapability.cashDrawerOpenActiveAtModelIndex(modelIndex) == true {
-                let nestAlertView: UIAlertController = UIAlertController.init(title: "Select CashDrawer Open Status.", message: "", preferredStyle: .actionSheet)
-                
-                nestAlertView.view.tag = AlertViewIndex.cashDrawerOpenActive.rawValue
-                
-                self.navigationController!.popViewController(animated: true)
-            }
-            else {
-                AppDelegate.setPortName                (self.portName)
-                AppDelegate.setPortSettings            (self.portSettings)
-                AppDelegate.setModelName               (self.modelName)
-                AppDelegate.setMacAddress              (self.macAddress)
-                AppDelegate.setEmulation               (self.emulation)
-                AppDelegate.setCashDrawerOpenActiveHigh(true)
+        
+            AppDelegate.setPortName                (self.portName)
+            AppDelegate.setPortSettings            (self.portSettings)
+            AppDelegate.setModelName               (self.modelName)
+            AppDelegate.setMacAddress              (self.macAddress)
+            AppDelegate.setEmulation               (self.emulation)
+            AppDelegate.setCashDrawerOpenActiveHigh(true)
                 
                 
-                self.navigationController!.popViewController(animated: true)
-            }
+            self.navigationController!.popViewController(animated: true)
+        
         
     }
     

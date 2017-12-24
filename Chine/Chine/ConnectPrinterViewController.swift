@@ -14,6 +14,7 @@ class ConnectPrinterViewController: UIViewController{
         //find printers
         //add to table and highlight if printer is already connected to
         var foundPrinters = SMPort.searchPrinter("BT:") as? [PortInfo]
+        // for all printers found check if the printer is the currently connected printer
     }
 
     

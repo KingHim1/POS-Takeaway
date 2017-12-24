@@ -41,17 +41,28 @@ class OrderItemsTableViewController: UITableViewController{
             }
         }
         
+        
         cell.itemNum = row
         if allAddons.contains(itemNumbersInOrder[row]){
             cell.itemName?.text! = ("\(String(describing: getItemName(Int16(itemNumbersInOrder[row]))))")
             cell.itemName?.font = UIFont(name: "Helvetica", size: 12)
+            cell.itemsQuantity?.text! = ""
             cell.itemsPrice?.text! = ""
             cell.isUserInteractionEnabled = false
         }
         else{
+            price = newOrder.sharedInstance.getItPrice(itemNum: itemNoWithoutAddons ) * Float(newOrder.sharedInstance.getItemQuantity(itemIndex: itemNoWithoutAddons))
+            if let addons = newOrder.sharedInstance.orderAddons[itemNoWithoutAddons]{
+                for addon in addons{
+                    price += getItemPrice(Int16(addon))
+                }
+            }
+            print(price)
             cell.itemName?.text! = ("\(String(describing: getItemName(Int16(itemNumbersInOrder[row]))))")
             cell.itemsPrice?.text! = ("£") +  ("\(price)")
             cell.itemName?.font = UIFont(name: "Helvetica", size: 19)
+            let quantity: Int = Int(newOrder.sharedInstance.getItemQuantity(itemIndex: itemNoWithoutAddons))
+            cell.itemsQuantity?.text! = String(quantity) + "x "
             cell.isUserInteractionEnabled = true
         }
         return cell

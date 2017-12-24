@@ -124,14 +124,14 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         let dateFormatterDay = DateFormatter()
         let dateFormatterTime = DateFormatter()
         dateFormatterDay.dateFormat = "dd-MM-yyyy"
-        dateFormatterDay.timeZone = TimeZone(secondsFromGMT: 3600)
+//        dateFormatterDay.timeZone = TimeZone(secondsFromGMT: 3600)
         dateFormatterTime.dateFormat = "hh:mma"
-        dateFormatterTime.timeZone = TimeZone(secondsFromGMT: 3600)
+//        dateFormatterTime.timeZone = TimeZone(secondsFromGMT: 3600)
         let dateFormatterCollect = DateFormatter()
-        dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: 3600 + timeTilCol * 60)
+        dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: 0 + timeTilCol * 60)
         dateFormatterCollect.dateFormat = "hh:mma"
-        
         let itemNumbers = order.1
+        let itemQuantity = order.10
         let itemComments = order.6
         let itemAddonNumbers = order.7
         let encoding: String.Encoding
@@ -173,10 +173,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         var x: Int = 0
         
-        for item in itemNumbers{
-            let itemArr = getItemOfNum(itemNum: item)
+        for item in 0..<itemNumbers.count{
+            let itemArr = getItemOfNum(itemNum: itemNumbers[item])
             var itemChinName = itemArr.itemChinName
-            var price = itemArr.itemPrice
+            var price = itemArr.itemPrice * Float(itemQuantity[item])
             if itemAddonNumbers[x] != nil{
                 itemChinName.append(" (")
                 for addon in itemAddonNumbers[x]!{
@@ -197,6 +197,10 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
             if priceLength == 3 {
                 pricePadding = "---------------------"
             }
+            if itemQuantity[item] > 1{
+                builder.appendData(withMultiple: ("\(itemQuantity[item])" + "x ").data(using:encoding), width: 3, height: 3)
+            }
+            
             
             builder.appendData(withMultiple: ("\(itemArr.itemEngName) \n").data(using:encoding), width: 2, height: 2)
             if itemComments[x]!.characters.count > 1{

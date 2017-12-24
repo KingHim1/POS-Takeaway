@@ -46,7 +46,7 @@ class OrderTableViewController: UITableViewController{
         return 1
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let order: (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int,Bool) = getOrderNumber(orderNum: orderNum)
+        let order: (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int,Bool, [Int]) = getOrderNumber(orderNum: orderNum)
         return order.1.count // change this to number of items in the menu
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> OrderTableCell {
@@ -54,14 +54,15 @@ class OrderTableViewController: UITableViewController{
             withIdentifier: "cell",
             for: indexPath) as! OrderTableCell
         let row = indexPath.row
-        let order: (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int, Bool) = getOrderNumber(orderNum: orderNum)
+        let order: (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int, Bool, [Int]) = getOrderNumber(orderNum: orderNum)
         let listOfItems = order.1
-        var price: Float = getItemPrice(Int16(order.1[row]))
+        var price: Float = getItemPrice(Int16(order.1[row])) * Float(order.10[row])
         if let arr = order.7[row]{
             for items in arr{
                 price += Float(getItemPrice(Int16(items)))
             }
         }
+        cell.itemQuantity?.text! = String(order.10[row]) + "x"
         cell.itemComment?.text! = order.6[row]!
         cell.itemsPrice?.text! = String(price)
         cell.itemName?.text! =  ("") + getItemName(Int16(listOfItems[row]))

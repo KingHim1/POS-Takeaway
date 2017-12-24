@@ -20,6 +20,7 @@ class orderItem{
     @NSManaged var orderItemAddons: [Int: [Int]]
     @NSManaged var orderPickupTime: Int
     @NSManaged var orderAsCollection: Bool
+    @NSManaged var orderItemQuantity: [Int]
 }
 
 class newOrder{
@@ -36,6 +37,7 @@ class newOrder{
     private var _orderItemAddons: [Int: [Int]] = [:]
     private var _orderPickupTime: Int = 0
     private var _orderAsCollection: Bool = true
+    private var _orderItemQuantity: [Int] = []
     var orderItemsAndAddons: [Int] = []
     
     func setCollectionOrTakeAway(colOrTake: Bool){
@@ -75,7 +77,9 @@ class newOrder{
         }
         _orderComment.remove(at: _orderComment.index(forKey: orderItems.count-1)!)
         orderAddons.removeValue(forKey: orderItems.count - 1)
-                orderItems.remove(at: itemNoWithoutAddons)
+        _orderItemQuantity.remove(at: itemNoWithoutAddons)
+        orderItems.remove(at: itemNoWithoutAddons)
+        
     }
 
     
@@ -92,14 +96,27 @@ class newOrder{
                     price += Float(getItemPrice(Int16(addons)))
                 }
             }
-            for items in _orderItems{
-                price += Float(getItemPrice(Int16(items)))
+            for items in 0..<_orderItems.count{
+                price += Float(getItemQuantity(itemIndex: items))*Float(getItemPrice(Int16(_orderItems[items])))
             }
             _orderPrice = price
         }
     }
     func getPrice() -> Float{
         return _orderPrice
+    }
+    func getItPrice(itemNum: Int)->Float{
+        let itemPrice = Float(getItemPrice(Int16(_orderItems[itemNum])))
+        return itemPrice
+    }
+    func getItemInOrderPrice(itemNum: Int) -> Float{
+        var itemPrice = Float(getItemPrice(Int16(_orderItems[itemNum])))
+        if let addons = orderAddons[itemNum]{
+            for addon in addons{
+                itemPrice += Float(getItemPrice(Int16(addon)))
+            }
+        }
+        return itemPrice
     }
     
     func addItemComment(itemNum: Int, comment: String){
@@ -125,8 +142,8 @@ class newOrder{
         set{
             _orderItems = newValue
             var price: Float = 0
-            for items in newValue{
-                price += Float(getItemPrice(Int16(items)))
+            for itemIndex in 0..<newValue.count{
+                price += Float(getItemQuantity(itemIndex: itemIndex)) * Float(getItemPrice(Int16(newValue[itemIndex])))
             }
             for items in _orderAddons{
                 for addons in items.value{
@@ -147,6 +164,7 @@ class newOrder{
     }
     
     func addItem(itemNum: Int){
+        _orderItemQuantity.append(1)
         orderItems.append(itemNum)
         orderItemsAndAddons.append(itemNum)
         addItemComment(itemNum: orderItems.count - 1, comment: "")
@@ -154,11 +172,30 @@ class newOrder{
     func addAddonAtPosition(itemNum: Int, pos: Int){
         orderItemsAndAddons.insert(itemNum, at: pos)
     }
+    func setItemQuantity(itemIndex: Int, quantity: Int){
+        _orderItemQuantity[itemIndex] = quantity
+        var price = Float(0.0)
+        for itemIndex in 0..<_orderItems.count{
+            price += Float(getItemQuantity(itemIndex: itemIndex)) * Float(getItemPrice(Int16(_orderItems[itemIndex])))
+        }
+        for items in _orderAddons{
+            for addons in items.value{
+                price += Float(getItemPrice(Int16(addons)))
+            }
+        }
+        
+        _orderPrice = price
+        
+        
+    }
+    func getItemQuantity(itemIndex: Int) -> Int{
+        return _orderItemQuantity[itemIndex]
+    }
     func checkout(){
         _orderNum = getAllOrderNumbers().count + 1
         _orderDateAndTime = Date.init(timeIntervalSinceNow: 0)
         //add to orders' database
-        addOrderToDatabase(orderNum: _orderNum, orderItems: _orderItems, orderDateAndTime: _orderDateAndTime, orderPrice: _orderPrice, orderCustName: _orderCustName, orderPhoneNum: _orderPhoneNum, orderComment: _orderComment, orderItemAddons: _orderItemAddons, orderPickupTime: _orderPickupTime, orderAsCollection: _orderAsCollection)
+        addOrderToDatabase(orderNum: _orderNum, orderItems: _orderItems, orderDateAndTime: _orderDateAndTime, orderPrice: _orderPrice, orderCustName: _orderCustName, orderPhoneNum: _orderPhoneNum, orderComment: _orderComment, orderItemAddons: _orderItemAddons, orderPickupTime: _orderPickupTime, orderAsCollection: _orderAsCollection, orderItemQuantity: _orderItemQuantity)
         orderItems = []
         _orderPrice = 0.0
         _orderCustName = ""
@@ -169,6 +206,7 @@ class newOrder{
         _orderAddons = [:]
         _orderPickupTime = 0
         _orderAsCollection = true
+        _orderItemQuantity = []
         orderItemsAndAddons = []
     }
     func getItemNumbers()->[Int]{
@@ -176,10 +214,10 @@ class newOrder{
     }
 }
 
-func getAllOrders () -> [(Int, [Int], Date, String, String, String, Int, Bool)]{
+func getAllOrders () -> [(Int, [Int], Date, String, String, String, Int, Bool, [Int])]{
     //create a fetch request, telling it about the entity
     let fetchRequest: NSFetchRequest<Orders> = Orders.fetchRequest()
-    var orders: Array<(Int, [Int], Date, String, String, String, Int, Bool)> = []
+    var orders: Array<(Int, [Int], Date, String, String, String, Int, Bool, [Int])> = []
     do {
         //go get the results
         let array_orders = try getContext().fetch(fetchRequest)
@@ -190,7 +228,7 @@ func getAllOrders () -> [(Int, [Int], Date, String, String, String, Int, Bool)]{
         for order in array_orders as [NSManagedObject] {
             //get the Key Value pairs (although there may be a better way to do that...
 //            print("order: " + "\(String(describing: item.value(forKey: "itemEnglishName")!))")
-            var thisOrder: (orderNum: Int, orderItems: [Int], orderDate: Date, orderPrice:  String, orderCustName: String, orderPhoneNum: String, orderPickupTime: Int, orderAsCollection: Bool)
+            var thisOrder: (orderNum: Int, orderItems: [Int], orderDate: Date, orderPrice:  String, orderCustName: String, orderPhoneNum: String, orderPickupTime: Int, orderAsCollection: Bool, orderItemQuantity: [Int])
             thisOrder.orderNum = order.value(forKey: "orderNum")! as! Int
             thisOrder.orderItems = (order.value(forKey: "orderItems")! as! [Int])
             thisOrder.orderDate = order.value(forKey: "orderDateAndTime")! as! Date
@@ -199,6 +237,7 @@ func getAllOrders () -> [(Int, [Int], Date, String, String, String, Int, Bool)]{
             thisOrder.orderPhoneNum = String(describing: order.value(forKey: "orderPhoneNum")!)
             thisOrder.orderPickupTime = order.value(forKey: "orderPickupTime")! as! Int
             thisOrder.orderAsCollection = order.value(forKey: "orderAsCollection")! as! Bool
+            thisOrder.orderItemQuantity = order.value(forKey: "orderItemQuantity")! as! [Int]
             orders.append(thisOrder)
         }
     } catch {
@@ -207,7 +246,7 @@ func getAllOrders () -> [(Int, [Int], Date, String, String, String, Int, Bool)]{
     return orders
 }
 
-func addOrderToDatabase (orderNum: Int, orderItems: [Int], orderDateAndTime: Date, orderPrice: Float, orderCustName: String, orderPhoneNum: String, orderComment: [Int: String], orderItemAddons: [Int: [Int]], orderPickupTime: Int, orderAsCollection: Bool) {
+func addOrderToDatabase (orderNum: Int, orderItems: [Int], orderDateAndTime: Date, orderPrice: Float, orderCustName: String, orderPhoneNum: String, orderComment: [Int: String], orderItemAddons: [Int: [Int]], orderPickupTime: Int, orderAsCollection: Bool, orderItemQuantity: [Int]) {
     
     let context = getContext()
     
@@ -226,6 +265,7 @@ func addOrderToDatabase (orderNum: Int, orderItems: [Int], orderDateAndTime: Dat
     item.setValue(orderItemAddons, forKey: "orderItemAddons")
     item.setValue(orderPickupTime, forKey: "orderPickupTime")
     item.setValue(orderAsCollection, forKey: "orderAsCollection")
+    item.setValue(orderItemQuantity, forKey: "orderItemQuantity")
 
     
     //save the context
@@ -321,9 +361,9 @@ func getAllAddOnOptions()->[Int]{
     return items
 }
 
-func getOrderNumber(orderNum: Int) -> (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int, Bool){
+func getOrderNumber(orderNum: Int) -> (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int, Bool, [Int]){
     let fetchRequest: NSFetchRequest<Orders> = Orders.fetchRequest()
-    var order: (orderNum: Int, orderItems:  [Int], orderDate: Date, orderPrice: Float, orderCustName: String, orderPhoneNum: String, orderComment: [Int: String], orderItemAddons: [Int: [Int]], orderPickupTime: Int, orderAsCollection: Bool)
+    var order: (orderNum: Int, orderItems:  [Int], orderDate: Date, orderPrice: Float, orderCustName: String, orderPhoneNum: String, orderComment: [Int: String], orderItemAddons: [Int: [Int]], orderPickupTime: Int, orderAsCollection: Bool, orderItemQuantity: [Int])
     order.orderNum = 0
     order.orderItems = []
     order.orderDate = Date.init(timeIntervalSinceNow: 0)
@@ -334,6 +374,7 @@ func getOrderNumber(orderNum: Int) -> (Int, [Int], Date, Float, String, String, 
     order.orderItemAddons = [:]
     order.orderPickupTime = 0
     order.orderAsCollection = true
+    order.orderItemQuantity = []
     
     do {
         //go get the results
@@ -358,6 +399,7 @@ func getOrderNumber(orderNum: Int) -> (Int, [Int], Date, Float, String, String, 
                 order.orderItemAddons = item.value(forKey: "orderItemAddons")! as! [Int: [Int]]
                 order.orderPickupTime = item.value(forKey: "orderPickupTime")! as! Int
                 order.orderAsCollection = item.value(forKey: "orderAsCollection")! as! Bool
+                order.orderItemQuantity = item.value(forKey: "orderItemQuantity")! as! [Int]
                 
             }
         }

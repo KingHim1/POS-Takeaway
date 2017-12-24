@@ -19,7 +19,7 @@ class CheckCancelOrderViewController: UIViewController{
 
  
     override func viewDidLoad() {
-        let order: (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int, Bool) = getOrderNumber(orderNum: orderNumber)
+        let order: (Int, [Int], Date, Float, String, String, [Int: String], [Int: [Int]], Int, Bool, [Int]) = getOrderNumber(orderNum: orderNumber)
             orderNum.text = String(order.0)
             customerName.text = order.4
             phoneNum.text = order.5

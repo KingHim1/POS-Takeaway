@@ -9,10 +9,24 @@
 import UIKit
 
 class AddOnViewController: UIViewController{
-   
+    var itemNoWithoutAddons = 0
     var previousController: OrderItemsTableViewController? = nil
+    @IBOutlet weak var QuantityLabel: UILabel!
+    @IBOutlet weak var QuantityStepper: UIStepper!
+    @IBAction func QuantityStepperInc(_ sender: Any) {
+        print(itemNoWithoutAddons)
+        QuantityLabel.text = "Quantity: " + String(QuantityStepper.value)
+        newOrder.sharedInstance.setItemQuantity(itemIndex: itemNoWithoutAddons,quantity: Int(QuantityStepper.value))
+        previousController?.reloadTable()
+        if let parent = previousController?.parent as? ViewController{
+            parent._price = newOrder.sharedInstance.getPrice()
+            
+        }
+    }
+    
     var itemNum: Int = 0
     var itemNameString: String = ""
+    
     
     
     @IBAction func removeItem(_ sender: Any) {
@@ -33,6 +47,9 @@ class AddOnViewController: UIViewController{
     
     override func viewDidLoad() {
         self.view.sizeToFit()
+        QuantityStepper.minimumValue = 1
+        QuantityStepper.stepValue = 1
+        QuantityStepper.maximumValue = 100
         let allAddons = getAllAddOnOptions()
         var listOfJustItems:[Int] = []
         for x in 0 ..< itemNum{
@@ -40,8 +57,10 @@ class AddOnViewController: UIViewController{
                 listOfJustItems.append(newOrder.sharedInstance.orderItemsAndAddons[x])
             }
         }
-        let itemNoWithoutAddons = listOfJustItems.count
+        itemNoWithoutAddons = listOfJustItems.count
+        QuantityLabel.text = "Quantity: " + String(newOrder.sharedInstance.getItemQuantity(itemIndex: itemNoWithoutAddons))
 //        var order = newOrder.sharedInstance.orderItems
+        QuantityStepper.value = Double(newOrder.sharedInstance.getItemQuantity(itemIndex: itemNoWithoutAddons))
         itemName.text = itemNameString
         if let addons = newOrder.sharedInstance.orderAddons[itemNoWithoutAddons]{
             listOfSelectedAddonNumbers = addons

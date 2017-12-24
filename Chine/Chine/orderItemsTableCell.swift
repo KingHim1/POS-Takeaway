@@ -14,4 +14,5 @@ class OrderItemsTableCell: UITableViewCell{
     
     @IBOutlet weak var itemsPrice: UILabel!
     @IBOutlet weak var itemName: UILabel!
-   }
+    @IBOutlet weak var itemsQuantity: UILabel!
+}

@@ -41,7 +41,7 @@ class OrderListTableViewController: UITableViewController{
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm:ss"
         let row = getAllOrders().count - indexPath.row - 1
-        let allOrders: [(Int, [Int], Date, String, String, String, Int, Bool)]  = getAllOrders()
+        let allOrders: [(Int, [Int], Date, String, String, String, Int, Bool, [Int])]  = getAllOrders()
         
         cell.orderNumber!.text = ("\(allOrders[row].0)")
         let price =  (allOrders[row].3)
