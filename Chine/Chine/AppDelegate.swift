@@ -117,7 +117,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
         let defaults = UserDefaults.standard
         let token = defaults.value(forKey: "isMenuUploaded")
-        clearMenuData(database: "Orders")
+//        clearMenuData(database: "Orders")
         if !(token! as! Bool) {
             var data = readDataFromCSV(fileName: "menu", fileType: "csv")
             data = cleanRows(file: data!)
