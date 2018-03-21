@@ -66,24 +66,26 @@ func updateMenu (itemCode: String, itemEnglishName:String, itemChineseName:Strin
     let context = getContext()
     
     
-        let item = NSEntityDescription.insertNewObject(forEntityName: "Menu", into: context)
+    let item = NSEntityDescription.insertNewObject(forEntityName: "Menu", into: context)
         
-        item.setValue(itemEnglishName, forKey: "itemEnglishName")
-        item.setValue(itemChineseName, forKey: "itemChineseName")
-        item.setValue(itemCode, forKey: "itemCode")
-        item.setValue(itemCategory, forKey: "itemCategory")
-        item.setValue(itemPrice, forKey: "itemPrice")
-        item.setValue(numItems() + 1, forKey: "itemNum")
-        print("\(String(describing: item.value(forKey: "itemEnglishName")))")
-        
+    item.setValue(itemEnglishName, forKey: "itemEnglishName")
+    item.setValue(itemChineseName, forKey: "itemChineseName")
+    item.setValue(itemCode, forKey: "itemCode")
+    item.setValue(itemCategory, forKey: "itemCategory")
+    item.setValue(itemPrice, forKey: "itemPrice")
+    let itemNumber = getAllItemNums().max()! + 1
+    print(itemNumber)
+    item.setValue(itemNumber, forKey: "itemNum")
+    print("\(String(describing: item.value(forKey: "itemEnglishName")))")
+    print("UPDATE MENU")
         //save the context
-        do {
-            try context.save()
-        } catch let error as NSError  {
-            print("Could not save \(error), \(error.userInfo)")
-        } catch {
+    do {
+        try context.save()
+    } catch let error as NSError  {
+        print("Could not save \(error), \(error.userInfo)")
+    } catch {
             
-        }
+    }
         
     
 }
@@ -95,6 +97,9 @@ func numItems() -> Int {
         //go get the results
         let array_items = try getContext().fetch(fetchRequest)
         
+        print("this is the number of items in database")
+        print(array_items.count)
+        
         //I like to check the size of the returned results!
         return array_items.count
         
@@ -103,6 +108,7 @@ func numItems() -> Int {
     } catch {
         print("Error with request: \(error)")
     }
+    
     return numOfItems
 }
 
@@ -122,6 +128,27 @@ func getAllItemCodes () -> [String]{
         for item in array_items as [NSManagedObject] {
             //get the Key Value pairs (although there may be a better way to do that...
             items.append(String(describing: item.value(forKey: "itemCode")!))
+        }
+    } catch {
+        print("Error with request: \(error)")
+    }
+    return items
+}
+func getAllItemNums () -> [Int]{
+    //create a fetch request, telling it about the entity
+    let fetchRequest: NSFetchRequest<Menu> = Menu.fetchRequest()
+    var items: Array<Int> = []
+    do {
+        //go get the results
+        let array_items = try getContext().fetch(fetchRequest)
+        
+        //I like to check the size of the returned results!
+        
+        //You need to convert to NSManagedObject to use 'for' loops
+        
+        for item in array_items as [NSManagedObject] {
+            //get the Key Value pairs (although there may be a better way to do that...
+            items.append(item.value(forKey: "itemNum")! as! Int)
         }
     } catch {
         print("Error with request: \(error)")
@@ -174,6 +201,7 @@ func getAllItemNames () -> [String]{
     //create a fetch request, telling it about the entity
     let fetchRequest: NSFetchRequest<Menu> = Menu.fetchRequest()
     var items: Array<String> = []
+    print("getALLITEMNAMES")
     do {
         //go get the results
         let array_items = try getContext().fetch(fetchRequest)
@@ -351,6 +379,9 @@ func getItemOfNum(itemNum: Int)-> (itemNum: Int, itemCategory: String, itemCode:
     menuItem.itemEngName = "database messed up"
     menuItem.itemChinName = "database messed up"
     menuItem.itemPrice = 0
+    print("FETCHING ITEM OF ITEM NUM:")
+    print(itemNum)
+        
     do {
         //go get the results
         fetchRequest.predicate = NSPredicate(format: "itemNum == \(itemNum)")
@@ -371,6 +402,10 @@ func getItemOfNum(itemNum: Int)-> (itemNum: Int, itemCategory: String, itemCode:
                 
                 
             }
+        }
+        else
+        {
+            print("multiple items with same item num")
         }
     }
     catch{
@@ -408,11 +443,10 @@ func deleteItemFromDatabase(itemNum: Int){
     do{
         fetchRequest.predicate = NSPredicate(format: "itemNum == \(itemNum)")
         let array_items = try context.fetch(fetchRequest)
-        if array_items.count == 1{
-            for item in array_items as [NSManagedObject] {
-                context.delete(item)
-            }
+        for item in array_items as [NSManagedObject] {
+            context.delete(item)
         }
+        
         try context.save() }
     catch let error as NSError  {
         print("Could not save \(error), \(error.userInfo)")

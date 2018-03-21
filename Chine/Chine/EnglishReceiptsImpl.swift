@@ -188,7 +188,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
            
             
             let priceStr = String(price)
-            let priceLength = priceStr.characters.count
+            let priceLength = priceStr.count
 //            let engName = String(getItemName(Int16(item)))
 //            let engNameLength = engName?.characters.count
 //            let itemComm = String(describing: itemComments[x]!)
@@ -203,7 +203,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
             
             
             builder.appendData(withMultiple: ("\(itemArr.itemEngName) \n").data(using:encoding), width: 2, height: 2)
-            if itemComments[x]!.characters.count > 1{
+            if itemComments[x]!.count > 1{
                 builder.appendData(withMultiple: ("\(String(describing: itemComments[x]!))\n").data(using:encoding), width: 2, height: 2)
             }
             if itemArr.itemChinName != "N/A"{
@@ -221,7 +221,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         }
         
         builder.appendData(withMultiple: "Total ".data(using: encoding), width: 2, height: 2)
-        let orderTotalLength = String(order.3).characters.count
+        let orderTotalLength = String(order.3).count
         var totalPadding = ""
         for _ in 0..<(17-orderTotalLength){
             totalPadding += " "

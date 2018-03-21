@@ -42,7 +42,7 @@ class EditOrDeleteItemViewController: UIViewController{
     
     @IBAction func ItemCatEdited(_ sender: Any) {
         if let text = itemCategory.text{
-            if text.characters.count > 1 {
+            if text.count > 1 {
                 itemCatIsString = true
                 testAndEnableButton()
             }
@@ -58,7 +58,7 @@ class EditOrDeleteItemViewController: UIViewController{
     }
     @IBAction func ItemEngNameEdited(_ sender: Any) {
         if let text = itemEnglishName.text{
-            if text.characters.count > 1{
+            if text.count > 1{
                 itemEngNameIsString = true
                 testAndEnableButton()
             }

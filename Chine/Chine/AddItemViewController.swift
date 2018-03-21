@@ -41,7 +41,7 @@ class AddItemViewController: UIViewController{
     
     @IBAction func ItemCatEdited(_ sender: Any) {
         if let text = itemCat.text{
-            if text.characters.count > 1 {
+            if text.count > 1 {
                 itemCatIsString = true
                 category = text
                 testAndEnableButton()
@@ -64,7 +64,7 @@ class AddItemViewController: UIViewController{
     }
     @IBAction func ItemEngNameEdited(_ sender: Any) {
         if let text = itemEngName.text{
-            if text.characters.count > 1{
+            if text.count > 1{
                 itemEngNameIsString = true
                 engName = text
                 testAndEnableButton()
