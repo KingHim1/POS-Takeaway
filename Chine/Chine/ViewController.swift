@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         removeCategories()
         resetCategories()
         checkoutButton.isUserInteractionEnabled = false
-        stepperUI.stepValue = 5
+        stepperUI.stepValue = 10
         stepperUI.value = 0
         stepperUI.minimumValue = 0
     }

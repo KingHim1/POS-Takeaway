@@ -31,7 +31,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
 //        let itemAddonNumbers = order.7
         
         
-        let encoding: String.Encoding
+        var encoding: String.Encoding
         
         if utf8 == true {
             encoding = String.Encoding.utf8
@@ -43,6 +43,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
             
             builder.append(SCBCodePageType.CP998)
         }
+//        encoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(CFStringEncoding(CFStringEncodings.big5.rawValue)))
         
         builder.append(SCBInternationalType.USA)
         
@@ -125,9 +126,11 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         let dateFormatterTime = DateFormatter()
         dateFormatterDay.dateFormat = "dd-MM-yyyy"
 //        dateFormatterDay.timeZone = TimeZone(secondsFromGMT: 3600)
+        dateFormatterTime.locale = Locale(identifier: "en_GB")
         dateFormatterTime.dateFormat = "hh:mma"
 //        dateFormatterTime.timeZone = TimeZone(secondsFromGMT: 3600)
         let dateFormatterCollect = DateFormatter()
+        dateFormatterCollect.locale = Locale(identifier: "en_GB")
         dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: 0 + timeTilCol * 60)
         dateFormatterCollect.dateFormat = "hh:mma"
         let itemNumbers = order.1
@@ -154,7 +157,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         builder.appendAlignment(SCBAlignmentPosition.center)
         
         builder.appendData(withMultiple:(
-            "Fortune Corner\n" +
+            "Oakham Takeaway\n" +
             "\n").data(using: encoding), width: 2, height: 2)
         if order.9{
             builder.appendData(withMultiple:(("Collection\n").data(using: encoding)), width: 2, height: 2)
@@ -175,6 +178,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         
         for item in 0..<itemNumbers.count{
             let itemArr = getItemOfNum(itemNum: itemNumbers[item])
+            let itemCode = itemArr.itemCode
             var itemChinName = itemArr.itemChinName
             var price = itemArr.itemPrice * Float(itemQuantity[item])
             if itemAddonNumbers[x] != nil{
@@ -207,18 +211,21 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
                 builder.appendData(withMultiple: ("\(String(describing: itemComments[x]!))\n").data(using:encoding), width: 2, height: 2)
             }
             if itemArr.itemChinName != "N/A"{
-                builder.appendData(withMultiple: ("\(itemChinName)\n").data(using:encoding), width: 2, height: 2)
+                builder.appendData(withMultiple: ("\(itemCode)" + ": " + "\(itemQuantity[item])" + "x " + "\(itemChinName)\n").data(using:encoding), width: 2, height: 2)
 
+            }
+            else{
+                builder.appendData(withMultiple: ("\(itemCode)\n").data(using:encoding), width: 2, height: 2)
             }
             builder.appendData(withMultiple: (pricePadding + "\(priceStr)\n\n").data(using:encoding), width: 2, height: 2)
             x = x + 1
             
         }
-        let pricePadding = "------------------------"
-        if order.3 >= 25{
-            builder.appendData(withMultiple: (("Prawn Crackers\n").data(using: encoding)), width: 2, height: 2)
-            builder.appendData(withMultiple: (pricePadding.data(using: encoding)), width: 2, height: 2)
-        }
+//        let pricePadding = "------------------------"
+//        if order.3 >= 25{
+//            builder.appendData(withMultiple: (("Prawn Crackers\n").data(using: encoding)), width: 2, height: 2)
+//            builder.appendData(withMultiple: (pricePadding.data(using: encoding)), width: 2, height: 2)
+//        }
         
         builder.appendData(withMultiple: "Total ".data(using: encoding), width: 2, height: 2)
         let orderTotalLength = String(order.3).count
