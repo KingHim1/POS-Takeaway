@@ -119,7 +119,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
     
     override func append3inchTextReceiptData(_ builder: ISCBBuilder, utf8: Bool) {
         let order = getOrderNumber(orderNum: orderNum)
-        let date = order.2
+        var date = order.2
         let timeTilCol = order.8
         print(order.2)
         let dateFormatterDay = DateFormatter()
@@ -131,7 +131,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
 //        dateFormatterTime.timeZone = TimeZone(secondsFromGMT: 3600)
         let dateFormatterCollect = DateFormatter()
         dateFormatterCollect.locale = Locale(identifier: "en_GB")
-        dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: 0 + timeTilCol * 60)
+//        dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: 0 + timeTilCol * 60)
         dateFormatterCollect.dateFormat = "hh:mma"
         let itemNumbers = order.1
         let itemQuantity = order.10
@@ -157,7 +157,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         builder.appendAlignment(SCBAlignmentPosition.center)
         
         builder.appendData(withMultiple:(
-            "Oakham Takeaway\n" +
+            "Fortune Corner\n" +
             "\n").data(using: encoding), width: 2, height: 2)
         if order.9{
             builder.appendData(withMultiple:(("Collection\n").data(using: encoding)), width: 2, height: 2)
@@ -211,12 +211,12 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
                 builder.appendData(withMultiple: ("\(String(describing: itemComments[x]!))\n").data(using:encoding), width: 2, height: 2)
             }
             if itemArr.itemChinName != "N/A"{
-                builder.appendData(withMultiple: ("\(itemCode)" + ": " + "\(itemQuantity[item])" + "x " + "\(itemChinName)\n").data(using:encoding), width: 2, height: 2)
+                builder.appendData(withMultiple: ("\(itemQuantity[item])" + "x " + "\(itemChinName)\n").data(using:encoding), width: 2, height: 2)
 
             }
-            else{
-                builder.appendData(withMultiple: ("\(itemCode)\n").data(using:encoding), width: 2, height: 2)
-            }
+//            else{
+//                builder.appendData(withMultiple: ("\(itemQuantity[item])x " + "N/A\n").data(using:encoding), width: 2, height: 2)
+//            }
             builder.appendData(withMultiple: (pricePadding + "\(priceStr)\n\n").data(using:encoding), width: 2, height: 2)
             x = x + 1
             
@@ -235,6 +235,9 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         }
         builder.appendData(withMultiple: "\(totalPadding)£\(order.3)\n\n".data(using: encoding), width: 2, height: 2)
         
+//      Set time to be new Plus the collection time
+        date.addTimeInterval(Double(timeTilCol) * 60.0)
+
         builder.appendData(withMultiple: ("Collection Time: \(dateFormatterCollect.string(from: date))\n").data(using: encoding), width: 2, height: 2)
         builder.appendData(withMultiple: ("Cust. Name: \(order.4)").data(using: encoding), width: 2, height: 2)
         

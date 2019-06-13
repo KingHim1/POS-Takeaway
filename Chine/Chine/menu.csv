@@ -1,215 +1,278 @@
-1,A1,Four Seasons,7.3,Chefs Rec
-2,A2,Wandering Dragon,7.3,Chefs Rec
-3,A3,Happy Family,7.3,Chefs Rec
-4,A4,Merry Paradise,7.3,Chefs Rec
-5,A5.1,1/4 Crispy Duck,9.0,Chefs Rec
-6,A5.2,1/2 Crispy Duck,17.0,Chefs Rec
-7,A6,Aro. Lamb + spicy s.,6.3,Chefs Rec
-8,A7,Chicken Br. + Coconut C.S.,6.2,Chefs Rec
-9,A8,K. Prawn + Coconut C.S.,6.7,Chefs Rec
-10,A9,Mixed Meat + Bean Curd,6.2,Chefs Rec
-11,A10,Shredded Beef + Bean Curd,6.2,Chefs Rec
-12,A11,Fillet Steak + Canton. S.,8.5,Chefs Rec
-13,A12,Fr. Shredded Beef + Chilli,6.4,Chefs Rec
-14,A13,Szechuan King Prawn,6.7,Chefs Rec
-15,A14,Szechuan Chicken,6.4,Chefs Rec
-16,A15,Szechuan Pork,6.4,Chefs Rec
-17,A16,K. Prawn + Garlic S.,6.7,Chefs Rec
-18,A17,Chicken + Garlic S.,6.2,Chefs Rec
-19,A18, Beef + Garlic S.,6.2,Chefs Rec
-20,A19,Koon Po K. Prawn,6.7,Chefs Rec
-21,A20,Koon Po Chicken,6.2,Chefs Rec
-22,A21,Koon Po Pork,6.2,Chefs Rec
-23,A22,K. Prawn + Broccoli,6.7,Chefs Rec
-24,A23,Chicken + Broccoli,6.2,Chefs Rec
-25,A24,Beef + Broccoli,6.2,Chefs Rec
-26,A25,Satay K. Prawn Skew.,6.7,Chefs Rec
-27,A26,Satay Chicken Skew.,6.2,Chefs Rec
-28,A27,Satay Beef Skew.,6.2,Chefs Rec
-29,1,Chicken + Mush. Soup,3.1,Soup and App
-30,2,Chicken + Nood. Soup,3.1,Soup and App
-31,3,Chicken + SweetCorn Soup,3.3,Soup and App
-32,4,Hot + Sour Soup,3.3,Soup and App
-33,4a,Wan Ton Soup,3.5,Soup and App
-34,5,Mini Spring Rolls(8),2,Soup and App
-35,5a,Curry Samosas,2.2,Soup and App
-36,6,Crispy Panc. Roll,2.7,Soup and App
-37,6a,Mini Peking Duck Rolls(4),2.6,Soup and App
-38,7,Prawn Crackers,1.9,Soup and App
-39,8,BBQ Ribs,3.4,Soup and App
-40,9,Sesame Prawn Toast,3.4,Soup and App
-41,10,Seaweed,3.4,Soup and App
-42,11,Chicken + Mush.,5.8,Chicken
-43,12,Chicken + Bamb. and Water Chestnuts,5.8,Chicken
-44,13,Chicken + Cashew N.,6.2,Chicken
-45,14,Chicken + Pineapple,5.8,Chicken
-46,15,Chicken + Ginger + Pineapple,6.2,Chicken
-47,16,Chicken + Tomatoes,5.8,Chicken
-48,17,Chicken + Sweetcorn,5.8,Chicken
-49,18,Roast Chicken Ch. Style,6.2,Chicken
-50,19,Chicken + Oyster S.,6.2,Chicken
-51,20,Chicken + Straw Mush.,6.2,Chicken
-52,21,Chicken + Chinese Mush.,6.2,Chicken
-53,22,Chicken + Ging. Spring Onion,6.2,Chicken
-54,23,Chicken + Green Pepp. Black Bean S.,6.2,Chicken
-55,24,Chicken + Chinese Mixed Veg.,6.2,Chicken
-56,25,Satay Chicken,6.2,Chicken
-57,26,Lemon Chicken,6.2,Chicken
-58,27,Beef + Mush.,5.8,Beef
-59,28,Beef + Bamb. and Water Chestnuts,5.8,Beef
-60,29,Beef + Ginger + Pineapple,6.2,Beef
-61,30,Beef + Tomatoes,5.8,Beef
-62,31,Beef + Onions,5.8,Beef
-63,32,Beef + Oyster S.,6.2,Beef
-64,33,Beef + Straw Mush.,6.2,Beef
-65,34,Beef + Chinese Mush.,6.2,Beef
-66,35,Beef + Ging. Spring Onion,6.2,Beef
-67,36,Beef + Green Pepp. Black Bean S.,6.2,Beef
-68,37,Beef + Chinese Mixed Veg,6.2,Beef
-69,38,Satay Beef,6.2,Beef
-70,39,K. Prawn + Mush.,6.4,Seafood
-71,40,Shrimp + Mush.,5.9,Seafood
-72,41,K. Prawn + Bamb + Water Chestnuts,6.4,Seafood
-73,42,K. Prawn + Cashew N.,6.7,Seafood
-74,43,K. Prawn + Pineapple,6.4,Seafood
-75,44,K. Prawn + Ging. + Pineapple,6.7,Seafood
-76,45,K. Prawn + Tomatoes,6.4,Seafood
-77,46,K. Prawn + Sweetcorn,6.4,Seafood
-78,47,K. Prawn + Oyster S.,6.7,Seafood
-79,48,K. Prawn + Straw Mush.,6.7,Seafood
-80,49,K. Prawn + Chinese Mush.,6.7,Seafood
-81,50,K. Prawn + Ging. + Spring Onion,6.7,Seafood
-82,51,K. Prawn + Green Pepp. + Black Bean S.,6.7,Seafood
-83,52,K. Prawn + Chinese Mixed Veg.,6.7,Seafood
-84,53,Satay K. Prawn,6.7,Seafood
-85,54,Fried K. Prawn in Batter,6.7,Seafood
-86,55,BBQ. Pork Ribs(Portion),7.8,Pork
-87,56,Salt and Spicy Ribs,6.5,Pork
-88,57,Ribs in Peking S.,6.5,Pork
-89,58,Pork + Mush.,5.8,Pork
-90,59,Pork + Bamb. + Water Chestnuts,5.8, Pork
-91,60,Roast Pork + Beansprouts,6.2,Pork
-92,61,Roast Pork + Cashew Nuts,6.2,Pork
-93,62,Satay Pork,6.2,Pork
-94,63,Duck + Mush.,6.9,Duck
-95,64,Duck + Beansprouts,6.9,Duck
-96,65,Duck + Ging. + Pineapple,6.9,Duck
-97,66,Duck + Pineapple,6.9,Duck
-98,67,Duck + Orange S.,7.1,Duck
-99,68,Duck + Plum S.,7.1,Duck
-100,69,Special Curry,6.9,Curry
-101,70,Chicken + K.Prawn Curry,6.9,Curry
-102,71,Beef + K.Prawn Curry,6.9,Curry
-103,72,Chicken + Beef Curry,6.9,Curry
-104,73,Duck Curry,6.5,Curry
-105,74,K. Prawn Curry,6.5,Curry
-106,75,Shrimp Curry,5.8,Curry
-107,76,Chicken Curry,5.6,Curry
-108,77,Beef Curry,5.6,Curry
-109,78,Pork Curry,5.6,Curry
-110,79,Chinese Pork Curry,5.6,Curry
-111,80,Special Chop Suey,6.4,Chop Suey
-112,81,K. Prawn Chop Suey,6.4,Chop Suey
-113,82,Shrimp Chop Suey,5.9,Chop Suey
-114,83,Chicken Chop Suey,5.8,Chop Suey
-115,84,Beef Chop Suey,5.8,Chop Suey
-116,85,Pork Chop Suey,5.8,Chop Suey
-117,86,Chinese Pork Chop Suey,5.8,Chop Suey
-118,87,S+S K. Prawn(balls),6.6,Sweet and Sour
-119,88,S+S Chicken(balls),5.8,Sweet and Sour
-120,89,S+S Pork(balls),5.8,Sweet and Sour
-121,90,S+S Ribs,6.0,Sweet and Sour
-122,91,S+S Duck,6.7,Sweet and Sour
-123,92,S+S K. Prawn (HK),6.7,Sweet and Sour
-124,93,S+S Chicken (HK),6.4,Sweet and Sour
-125,94,S+S Pork (HK),6.4,Sweet and Sour
-126,95,Special Foo Yung,6.4,Foo Yung
-127,96,K. Prawn Foo Yung,6.4,Foo Yung
-128,97,Shrimp Foo Yung,5.9,Foo Yung
-129,98,Chicken Foo Yung,5.8,Foo Yung
-130,99,Chinese Pork Foo Yung,5.8,Foo Yung
-131,100,Mush. Foo Yung,5.4,Foo Yung
-132,101,Plain Foo Yung,5.2,Foo Yung
-133,102,Special FR,7.0,Fried Rice
-134,103,Yung Chow FR,6.6,Fried Rice
-135,104,Singapore FR,6.6,Fried Rice
-136,105,K. Prawn FR,7.0,Fried Rice
-137,106,Shrimp FR,6.5,Fried Rice
-138,107,Chicken FR,6.4,Fried Rice
-139,108,Beef FR,6.4,Fried Rice
-140,109,Chinese Pork FR,6.4,Fried Rice
-141,110,Ham FR,6.4,Fried Rice
-142,111,Rainbow FR,6.6,Fried Rice
-143,112,Special Chow Mein,7.0,Chow Mein
-144,113,Singapore Chow Mein,6.6,Chow Mein
-145,114,K. Prawn Chow Mein,7.0,Chow Mein
-146,115,Shrimp Chow Mein,6.5,Chow Mein
-147,116,Chicken Chow Mein,6.4,Chow Mein
-148,117,Beef Chow Mein,6.4,Chow Mein
-149,118,Chinese Pork Chow Mein,6.4,Chow Mein
-150,119,Fried Rice Vermicelli,7.0,Chow Mein
-151,120,Veg. Curry,5.6,Vegetable
-152,121,Mush. Curry,5.6,Vegetable
-153,122,Mush. Chop Suey,5.6,Vegetable
-154,123,Veg. Chow Mein,5.9,Vegetable
-155,124,Mush. Chow Mein,5.9,Vegetable
-156,125,Mixed Mush. + Beansprouts,5.8,Vegetable
-157,126,Mixed Mush. + Bamb. + Water Chestnuts,5.8,Vegetable
-158,127,Mixed Mush. + Green Pepp. + Black Bean S.,5.9,Vegetable
-159,128,Mixed Mush. + Brocolli,5.9,Vegetable
-160,129,Mixed Veg. + Cashew N.,5.9,Vegetable
-161,130,Mixed Veg. + Szechuan S.,5.8,Vegetable
-162,131,S+S Mush.(HK),5.8,Vegetable
-163,132,Mixed Mush. + Bean Curd,5.8,Vegetable
-164,133,Bean Curd + Green Pepp. + Black Bean S.,5.9,Vegetable
-165,134,Sirloin Steak,10.5,English
-166,135,Sirloin Steak + Black Pepp. S.,11.0,English
-167,136,Roast Chicken,6.7,English
-168,137,Sausages + Chips + Peas,6.0,English
-169,138,K. Prawn Omelette,7.6,English
-170,139,Shrimp Omelette,6.8,English
-171,140,Chicken Omelette,6.7,English
-172,141,Ham Omelette,6.7,English
-173,142,Mush.Omelette,6.6,English
-174,143,Plain Omelette,6.0,English
-175,144a,Fried Rice(S),2.4,Extra Portions
-176,144b,Fried Rice(R),2.8,Extra Portions
-177,144c,Fried Rice(L),3.8,Extra Portions
-178,145a,Boiled Rice(S),2.3,Extra Portions
-179,145b,Boiled Rice(R),2.7,Extra Portions
-180,145c,Boiled Rice(L),3.7,Extra Portions
-181,146,Bamb. + Water Chestnuts,4.0,Extra Portions
-182,147,Chips,2.0,Extra Portions
-183,148,Beansprouts,3.4,Extra Portions
-184,149,Chow Mein,3.4,Extra Portions
-185,150,Mixed Veg.,3.8,Extra Portions
-186,151,Mushrooms,3.4,Extra Portions
-187,152,Garlic Mush.,3.7,Extra Portions
-188,153,Fried Onions,3.3,Extra Portions
-189,154,Fried Onion Rings,2.0,Extra Portions
-190,155,Sweet + Sour S.,1.9,Extra Portions
-191,156,Curry S.,1.9,Extra Portions
-192,157,Gravy,1.9,Extra Portions
-193,158,Banana Fritter,2.3,Extra Portions
-194,159,Pineapple Fritter,2.3,Extra Portions
-195,sA,Two Persons,20.0,Special Set Dinner
-196,sB,Three Persons,34.0,Special Set Dinner
-197,sC,Four Persons,57.0,Special Set Dinner
-198,S1,Two Persons,26.0,Cantonese Set Dinner
-199,S2,Three Persons,41.0,Cantonese Set Dinner
-200,S3,Four Persons,60.0,Cantonese Set Dinner
-201,E1,Duck Chow Mein,7.0,Special
-202,E2,Duck FR,7.0,Special
-203,E3,Satay S.,2.5,Special
-204,E4,Shredded Chicken + Chilli,6.4,Special
-205,E5,BBQ S.,2.5,Special
-206,E6,Batter Chicken Breast,6.4,Special
-207,E7,Chow Mein(L),4.9,Special
-208,E8,Salt+Spicy Chips,2.5,Special
-209,E9,Salt+Spicy Chicken,6.4,Special
-210,E10,Salt+Spicy K.Prawns,6.7,Special
-211,O1,+Hot,0.0,Addons
-212,O2,No MSG,0.0,Addons
-213,O3,No Onion,0.0,Addons
-
-
+1,1a,1/4 aromatic duck ,8.5,Appetisers
+2,1b,1/2 aromatic duck,16.5,Appetisers
+3,2,Pork yuk sung ,6,Appetisers
+4,3,BBQ ribs,5.7,Appetisers
+5,4,Lemon ribs,5.7,Appetisers
+6,5,Sweet and sour ribs,5.7,Appetisers
+7,6,Syrup ribs,5.7,Appetisers
+8,7,Capital spare ribs,5.7,Appetisers
+9,8,Crispy spare ribs ,5.7,Appetisers
+10,9,Salt and pepper spare ribs ,5.7,Appetisers
+11,10,Shredded salt and pepper chicken,5.2,Appetisers
+12,11,Skewered satay chicken,5.4,Appetisers
+13,12,Salt and pepper chicken wings ,4.8,Appetisers
+14,13,Deep fried chicken wings ,4.8,Appetisers
+15,14,Chicken wings in Cantonese sauce ,4.8,Appetisers
+16,15,Crispy pancake roll,2,Appetisers
+17,16,Vegetarian roll,3,Appetisers
+18,17,Chicken spring rolls,3.5,Appetisers
+19,18,Mini vegetarian rolls,2,Appetisers
+20,19,Prawn toast,2.8,Appetisers
+21,20,Seaweed ,3.4,Appetisers
+22,21,Crab claw,4,Appetisers
+23,22,Curry samosas ,3,Appetisers
+24,23,Chicken and sweet corn soup ,2.3,Soups
+25,24,Chicken and mushroom soup,2.3,Soups
+26,25,Chicken and noodle soup,2.3,Soups
+27,26,Hot and sour soup,2.3,Soups
+28,27,Special chop suey,5,Chop Suey
+29,28,Chicken chop suey,5,Chop Suey
+30,29,Beef chop suey,5,Chop Suey
+31,30,Roast pork chop suey ,5,Chop Suey
+32,31,King prawn chop suey ,5.7,Chop Suey
+33,32,Shrimp chop suey,5,Chop Suey
+34,33,Pan fried chicken in soy sauce,5.4,Chicken
+35,34,Lemon chicken ,5.4,Chicken
+36,35,Chicken in plum sauce,5.4,Chicken
+37,36,Shredded Chilli chicken ,5.4,Chicken
+38,37,Salt and pepper chilli chicken ,5.4,Chicken
+39,38,Chicken in Cantonese sauce ,5.4,Chicken
+40,39,Chicken with chilli bean sauce,5,Chicken
+41,40,Chicken in kung po sauce ,5.4,Chicken
+42,41,Chicken with ginger and spring onion,5.4,Chicken
+43,42,Chicken in satay sauce,5,Chicken
+44,43,Chicken with green peppers in black bean sauce,5,Chicken
+45,44,chicken with mushrooms in black bean sauce,5,Chicken
+46,45,chicken with mushrooms in black pepper sauce ,5,Chicken
+47,46,chicken with cashew nuts ,5,Chicken
+48,47,chicken with mixed vegetables,5,Chicken
+49,48,chicken with bamboo shoots and water chestnuts,5,Chicken
+50,49,chicken with beansprouts,5,Chicken
+51,50,chicken with mushrooms,5,Chicken
+52,51,chicken with pineapple ,5,Chicken
+53,52,Chinese style roast chicken with beansprouts,5,Chicken
+54,53,crispy pork in plum sauce,5.2,Pork
+55,54,pork in Szechuan sauce ,5.2,Pork
+56,55,pork in kung po sauce ,5.2,Pork
+57,56,pork with ginger and spring onions ,5,Pork
+58,57,pork in Cantonese sauce,5.2,Pork
+59,58,pork in satay sauce ,5,Pork
+60,59,pork with green pepper in black bean sauce ,5,Pork
+61,60,pork with mushrooms in black bean sauce,5,Pork
+62,61,pork with cashew nuts,5,Pork
+63,62,pork with mixed vegetables ,5,Pork
+64,63,pork with bamboo shoots and water chestnuts,5,Pork
+65,64,pork with beansprouts,5,Pork
+66,65,pork in chilli bean sauce,5,Pork
+67,66,pork with mushrooms,5,Pork
+68,67,crispy shredded chilli beef,5.4,Beef
+69,68,beef in chilli bean sauce,5,Beef
+70,69,beef with ginger and spring onions ,5,Beef
+71,70,beef in satay sauce,5,Beef
+72,71,beef with green peppers in black bean sauce,5,Beef
+73,72,beef with mushrooms in black bean sauce ,5,Beef
+74,73,beef with cashewnuts,5.4,Beef
+75,74,beef with mixed vegetables ,5,Beef
+76,75,beef with bamboo shoots and water chestnuts,5,Beef
+77,76,beef with beansprouts,5,Beef
+78,77,beef with mushrooms in black bean sauce ,5,Beef
+79,78,beef with pineapple ,5,Beef
+80,79,beef fillet in Cantonese sauce,8.8,Beef Fillet
+81,80,beef fillet with green peppers in black bean sauce,8.8,Beef Fillet
+82,81,beef fillet in satay sauce,8.8,Beef Fillet
+83,82,beef fillet with ginger and spring onions ,8.8,Beef Fillet
+84,83,beef fillet in black pepper sauce ,8.8,Beef Fillet
+85,84,king prawn in chilli bean sauce,5.7,King Prawn
+86,85,king prawn in plum sauce ,5.7,King Prawn
+87,86,slat and pepper king prawns ,5.7,King Prawn
+88,87,king prawns in kung po sauce ,5.8,King Prawn
+89,88,king prawn with ginger and spring onions ,5.8,King Prawn
+90,89,king prawns in satay sauce ,5.7,King Prawn
+91,90,king prawns with green peppers in black bean sauce ,5.7,King Prawn
+92,91,king prawns with mushrooms in black bean sauce,5.7,King Prawn
+93,92,king prawns with cashew nuts ,5.8,King Prawn
+94,93,king prawns with mixed vegetables,5.7,King Prawn
+95,94,king prawns with bamboo shoots and water chestnut,5.7,King Prawn
+96,95,king prawn with beansprout ,5.7,King Prawn
+97,96,king prawns with mushrooms in black bean sauce,5.7,King Prawn
+98,97,king prawns with pineapple,5.7,King Prawn
+99,98,duck in plum sauce,5.7,Duck
+100,99,duck with orange sauce ,5.7,Duck
+101,100,crispy duck with pineapple ,5.7,Duck
+102,101,duck with beansprouts,5.7,Duck
+103,102,duck with mushrooms ,5.7,Duck
+104,103,duck with ginger and spring onions ,5.7,Duck
+105,104,duck with satay sauce,5.7,Duck
+106,105,duck with green pepper in black bean sauce ,5.7,Duck
+107,106,duck with mushrooms in black bean sauce,5.7,Duck
+108,107,duck with mixed vegetables ,5.7,Duck
+109,108,duck with pickled ginger and pineapple ,5.7,Duck
+110,109,duck in chilli bean sauce,5.7,Duck
+111,110,wondering dragon ,5.8,Mixed Meat
+112,111,happy family ,5.8,Mixed Meat
+113,112,mixed meat in black pepper sauce ,5.8,Mixed Meat
+114,113,mixed meat with ginger and spring onions ,5.8,Mixed Meat
+115,114,mixed meat with green pepper in black bean sauce ,5.8,Mixed Meat
+116,115,mixed meat with mushroom in black bean sauce,5.8,Mixed Meat
+117,116,mixed meat with mushrooms ,5.8,Mixed Meat
+118,117,mixed meat in satay sauce,5.8,Mixed Meat
+119,118,mixed meat in chilli bean sauce,5.8,Mixed Meat
+120,119,special curry ,5,Curry
+121,120,king prawn curry ,5.7,Curry
+122,121,roast pork curry,5,Curry
+123,122,chicken curry ,5,Curry
+124,123,beef curry,5,Curry
+125,124,shrimp curry ,5,Curry
+126,125,duck curry,5.7,Curry
+127,126,vegetable curry ,4.4,Curry
+128,127,mushroom curry ,4.4,Curry
+129,128,chicken and beef curry ,5.2,Curry
+130,129,chicken and king prawn curry ,5.5,Curry
+131,130,king prawn and beef curry ,5.5,Curry
+132,131,chicken Thai green curry ,5,Thai Green Curry
+133,132,beef Thai green curry ,5,Thai Green Curry
+134,133,king prawn Thai green curry ,5.8,Thai Green Curry
+135,134,special Thai green curry ,6,Thai Green Curry
+136,135,sweet and sour king prawn balls ,5.7,Sweet And Sour
+137,136,sweet and sour chicken balls,5.2,Sweet And Sour
+138,137,sweet and sour pork balls ,5.2,Sweet And Sour
+139,138,sweet and sour king prawns HK style (no batter),5.7,Sweet And Sour
+140,139,sweet and sour chicken HK style (no batter),5.2,Sweet And Sour
+141,140,sweet and sour king prawns HK style ,5.8,Sweet And Sour
+142,141,sweet and sour chicken HK style ,5.4,Sweet And Sour
+143,142,sweet and sour pork HK style,5.4,Sweet And Sour
+144,143,special foo yung ,5,Foo Yung
+145,144,king prawn foo yung ,5.7,Foo Yung
+146,145,chicken foo yung ,5,Foo Yung
+147,146,roast foo yung ,5,Foo Yung
+148,147,shrimp foo yung ,5,Foo Yung
+149,148,mushroom foo yung ,4.4,Foo Yung
+150,149,roast chicken ,5.8,English Dishes
+151,150,special omelette ,5.8,English Dishes
+152,151,chicken omelette,5.8,English Dishes
+153,152,roast pork omelette,5.8,English Dishes
+154,153,king prawn omelette,6.5,English Dishes
+155,154,shrimp omelette,5.8,English Dishes
+156,155,mushroom omelette,5.4,English Dishes
+157,156,plain omelette,5.1,English Dishes
+158,157,house special chow Mein ,5.8,Noodle
+159,158,Malaysian chow Mein ,5.3,Noodle
+160,159,king prawn chow Mein ,5.8,Noodle
+161,160,yung chow  Mein ,5.3,Noodle
+162,161,shrimp chow Mein ,5.3,Noodle
+163,162,chicken chow mien ,5.3,Noodle
+164,163,beef chow Mein ,5.3,Noodle
+165,164,roast pork chow Mein ,5.3,Noodle
+166,165,Singapore chow Mein ,5.3,Noodle
+167,166,mushroom chow Mein ,4.8,Noodle
+168,167,vegetable chow Mein ,4.8,Noodle
+169,168,Singapore vermicelli noodles,5.7,Noodle
+170,169,yung chow vermicelli noodles,5.7,Noodle
+171,170,chicken vermicelli noodles,5.5,Noodle
+172,171,beef vermicelli noodles,5.5,Noodle
+173,172,roast pork vermicelli noodles,5.5,Noodle
+174,173,king prawn vermicelli noodles,5.8,Noodle
+175,174,vegetable vermicelli noodles,5,Noodle
+176,175,yung chow udon noodles,5.8,Udon Noodles
+177,176,chicken udon noodles,5.8,Udon Noodles
+178,177,beef udon noodles,5.8,Udon Noodles
+179,178,roast pork udon noodles,5.8,Udon Noodles
+180,179,king prawn udon noodles,6.3,Udon Noodles
+181,180,shredded pork and duck udon noodles,6,Udon Noodles
+182,181,mixed vegetables udon noodles,5.3,Udon Noodles
+183,182,house special fried rice ,5.8,Rice
+184,183,chicken fried rice,5.3,Rice
+185,184,roast pork fried rice ,5.3,Rice
+186,185,beef fried rice,5.3,Rice
+187,186,yung chow fried rice,5.3,Rice
+188,187,house special yung chow fried rice ,5.8,Rice
+189,188,king prawn fried rice,5.8,Rice
+190,189,shrimp fried rice,5.3,Rice
+191,190,Singapore fried rice ,5.3,Rice
+192,191,duck and king prawn fried rice ,5.3,Rice
+193,192,mushroom fried rice ,4.8,Rice
+194,193,vegetable fried rice ,4.8,Rice
+195,194,Malaysian pineapple fried rice ,5.3,Rice
+196,195,vegetable in chilli bean sauce ,4.4,Vegetarian
+197,196,vegetable in black bean sauce ,4.4,Vegetarian
+198,197,vegetables in oyster sauce ,4.4,Vegetarian
+199,198,vegetable with cashew nuts ,4.6,Vegetarian
+200,199,vegetables in sweet and sour sauce ,4.4,Vegetarian
+201,200,bean curd with vegetables in chilli bean sauce ,4.6,Vegetarian
+202,201,bean curd with vegetables in black bean sauce ,4.6,Vegetarian
+203,202,bean curd with ginger and spring onions ,4.6,Vegetarian
+204,203,bean curd vegetables,4.6,Vegetarian
+205,204,slat and pepper bean curd,4.6,Vegetarian
+206,205,bean curd with vegetables in Szechuan sauce,4.6,Vegetarian
+207,206a,Egg fried rice (SMALL),2.4,Extra Portions
+208,206b,Egg Fried rice (LARGE),3.2,Extra Portions
+209,207a,Boiled rice (SMALL),2.2,Extra Portions
+210,207b,Boiled rice (LARGE),3,Extra Portions
+211,208,chips ,1.8,Extra Portions
+212,209,salt and pepper chips ,2.8,Extra Portions
+213,210a,Fried Noodle (SMALL),2.7,Extra Portions
+214,210b,Fried Noodle (LARGE),3.5,Extra Portions
+215,211,stir fried mushroom ,2,Extra Portions
+216,212,stir fried bamboo and water chestnut,2,Extra Portions
+217,213,stir fried mixed vegetables,2.6,Extra Portions
+218,214,stir fried onions ,2,Extra Portions
+219,215,stir fried beansprouts,2.6,Extra Portions
+220,216,curry sauce (SMALL),1.5,Extra Portions
+221,217,curry sauce (LARGE),2,Extra Portions
+222,218,sweet and sour sauce (SMALL),1.5,Extra Portions
+223,219,Sweet and Sour sauce (LARGE),2,Extra Portions
+224,220,BBQ sauce (SMALL),1.5,Extra Portions
+225,221,BBQ sauce (LARGE),2,Extra Portions
+226,222,Black bean sauce (SMALL),2,Extra Portions
+227,223,Black bean sauce (LARGE),2.5,Extra Portions
+228,224,Cantonese sauce (SMALL),2,Extra Portions
+229,225,Cantone Sauce (LARGE),2.5,Extra Portions
+230,226,Hoi sin sauce (SMALL),2,Extra Portions
+231,227,Hoi sin sauce (LARGE),2.5,Extra Portions
+232,228,plum sauce (SMALL),2,Extra Portions
+233,229,Plum sauce (LARGE),2.5,Extra Portions
+234,230,prawn crackers,1.8,Extra Portions
+235,231,banana fritters,2.1,Desserts
+236,232,pineapple fritter,2.1,Desserts
+237,R1,R1,7,Round Containers
+238,R2,R2,7,Round Containers
+239,R3,R3,7,Round Containers
+240,R4,R4,7,Round Containers
+241,R5,R5,7,Round Containers
+242,R6,R6,7,Round Containers
+243,R7,R7,7,Round Containers
+244,R8,R8,7,Round Containers
+245,R9,R9,7,Round Containers
+246,R10,R10,7,Round Containers
+247,R11,R11,7,Round Containers
+248,R12,R12,7,Round Containers
+249,R13,R13,7,Round Containers
+250,R14,R14,7,Round Containers
+251,R15,R15,7,Round Containers
+252,R16,R16,7,Round Containers
+253,R17,R17,7,Round Containers
+254,R18,R18,7,Round Containers
+255,Set A,two person set meal,18.6,Set Meals
+256,set B,three person set meal,29.8,Set Meals
+257,Set C,four person set meal,42,Set Meals
+258,A1,+ FriedR(curry),1.0,Addons
+259,A2,+ Chips(curry),0.8,Addons
+260,A3,+ BoiledR(curry),0.8,Addons
+261,A4,+ Mush(curry),0.4,Addons
+262,A5,+ ThaiGrCurry(udon),1.0,Addons
+263,A6,+ Hot,0,Addons
+264,A7,+ Pancakes,1,Addons
+265,A8,No Veg,0,Addons
+266,A9,Mild,0,Addons
+267,A10,CardPayment,0,Appetisers
+268,2a,Crispy Fried Squid,6.5,Appetisers
+269,26a,Crab Meat and sweetcorn soup,3,Soups
+270,52a,Chicken in Oyster Sauce,5.4,Chicken
+271,52b,Chicken in Szechuan Sauce,5.4,Chicken
+272,97a,King Prawn in Szechuan Sauce,5.8,King Prawn
+273,223a,Lemon Sauce,2.5,Extra Portions
+274,223b,Satay Sauce,2.5,Extra Portions
+275,78a,beef in oyster sauce ,5.4,Beef
+276,A11,No Peas,0,Addons
+277,A12,No Onions,0,Addons,
+278,2b,Salt and Pepper Squid,5.8,Appetisers

@@ -66,6 +66,7 @@
 		7E2E5DAC1F743C9D007D7C99 /* CheckCancelOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5DAA1F743C9D007D7C99 /* CheckCancelOrderViewController.swift */; };
 		7E2E5DAD1F743C9D007D7C99 /* CheckPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2E5DAB1F743C9D007D7C99 /* CheckPrintViewController.swift */; };
 		7E7F39191F8CFF1700ADFC13 /* clearDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F39181F8CFF1700ADFC13 /* clearDatabase.swift */; };
+		7E95B61B224C0E87001B3E84 /* menu2.csv in Resources */ = {isa = PBXBuildFile; fileRef = 7E95B61A224C0E87001B3E84 /* menu2.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		7E2E5DAA1F743C9D007D7C99 /* CheckCancelOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckCancelOrderViewController.swift; sourceTree = "<group>"; };
 		7E2E5DAB1F743C9D007D7C99 /* CheckPrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckPrintViewController.swift; sourceTree = "<group>"; };
 		7E7F39181F8CFF1700ADFC13 /* clearDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = clearDatabase.swift; sourceTree = "<group>"; };
+		7E95B61A224C0E87001B3E84 /* menu2.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = menu2.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 				7E2E5D4A1F743B11007D7C99 /* ConfigController.swift */,
 				7E2E5D4B1F743B11007D7C99 /* ConfigurationViewController.swift */,
 				7E2E5D4C1F743B11007D7C99 /* Data.swift */,
+				7E95B61A224C0E87001B3E84 /* menu2.csv */,
 				7E2E5D4E1F743B11007D7C99 /* EditItemTableViewCell.swift */,
 				7E2E5D4F1F743B11007D7C99 /* EditItemTableViewController.swift */,
 				7E2E5D501F743B11007D7C99 /* editItemViewController.swift */,
@@ -304,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E95B61B224C0E87001B3E84 /* menu2.csv in Resources */,
 				7E2E5D9B1F743B12007D7C99 /* Soups.csv in Resources */,
 				7E2E5D2A1F743962007D7C99 /* LaunchScreen.storyboard in Resources */,
 				7E2E5D271F743962007D7C99 /* Assets.xcassets in Resources */,
