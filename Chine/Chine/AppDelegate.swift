@@ -119,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let token = defaults.value(forKey: "isMenuUploaded")
 //        clearMenuData(database: "Menu")
         if !(token! as! Bool) {
-            var data = readDataFromCSV(fileName: "menu", fileType: "csv")
+            var data = readDataFromCSV(fileName: "menu2", fileType: "csv")
             data = cleanRows(file: data!)
             let csvRows = csv(data: data!)
             print(csvRows[0][0]) // UXM n. 166/167
