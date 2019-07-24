@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         }
         set{
             price = newValue
-            priceLabel.text = "£" + String(newValue)
+            priceLabel.text = "£" + String((newValue * 100).rounded()/100)
             checkOutButtonCheck()
         }
     }

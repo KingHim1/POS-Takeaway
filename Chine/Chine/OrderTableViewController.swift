@@ -64,7 +64,7 @@ class OrderTableViewController: UITableViewController{
         }
         cell.itemQuantity?.text! = String(order.10[row]) + "x"
         cell.itemComment?.text! = order.6[row]!
-        cell.itemsPrice?.text! = String(price)
+        cell.itemsPrice?.text! = String(format:"%.2f", price)
         cell.itemName?.text! =  ("") + getItemName(Int16(listOfItems[row]))
         return cell
         
