@@ -11,7 +11,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var FilteredItemsListView: UIView!
+
     @IBOutlet weak var SearchButton: UIButton!
 
     @IBOutlet weak var collectionSegControl: UISegmentedControl!
@@ -182,19 +182,19 @@ class ViewController: UIViewController {
     }()
 
     
-    private lazy var SearchItemsTableViewController: SearchItemTableViewController = {
-        // Load Storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "searchItems") as! SearchItemTableViewController
-        
-        // Add View Controller as Child View Controller
-         self.add(asChildViewController: viewController)
-        
-        
-        return viewController
-    }()
+//    private lazy var SearchItemsTableViewController: SearchItemTableViewController = {
+//        // Load Storyboard
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//
+//        // Instantiate View Controller
+//        var viewController = storyboard.instantiateViewController(withIdentifier: "searchItems") as! SearchItemTableViewController
+//
+//        // Add View Controller as Child View Controller
+//         self.add(asChildViewController: viewController)
+//
+//
+//        return viewController
+//    }()
 
     private func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
@@ -338,6 +338,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
     
+    @IBOutlet weak var FilteredItemsListView: UIView!
+    
     @IBAction func searchChanged(_ sender: Any) {
         if let _filter = searchBar.text{
             print("happy")
@@ -347,11 +349,14 @@ class ViewController: UIViewController {
             listOfFilteredItemNum = listOfFilteredItemNum.sorted()
             print(listOfFilteredItemNum)
             for viewControllers in self.childViewControllers{
+                print(type(of: viewControllers))
                 if let tableVC = viewControllers as? SearchItemTableViewController{
+                    print("Search found")
                     tableVC.listOfFilteredItemNum = listOfFilteredItemNum
                     if let view = tableVC.view as? UITableView{
                         view.reloadData()
                     }
+                    print(type(of: tableVC.view))
                 }
             }
         }

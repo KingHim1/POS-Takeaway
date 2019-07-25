@@ -44,6 +44,7 @@ class SearchItemTableViewController: UITableViewController{
         return listOfFilteredItemNum.count // change this to number of items in the menu
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SearchItemTableViewCell {
+        print("setting up table")
         let cell = tableView.dequeueReusableCell(
             withIdentifier: "cell",
             for: indexPath) as! SearchItemTableViewCell
@@ -61,20 +62,20 @@ class SearchItemTableViewController: UITableViewController{
         
     }
     @IBOutlet var orderItems: UITableView!
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let buttonSender = sender as? SearchItemTableViewCell{
-//            if let destination = segue.destination as? EditOrDeleteItemViewController{
-//                let order = getItemOfNum(itemNum: Int(buttonSender.restorationIdentifier!)!)
-//                destination.category = order.itemCategory
-//                destination.code = order.itemCode
-//                destination.englishName = order.itemEngName
-//                destination.chineseName = order.itemChinName
-//                destination.price = order.itemPrice
-//                destination.itemNum = Int(buttonSender.restorationIdentifier!)!
-//                destination.previousViewController = self
-//            }
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let buttonSender = sender as? SearchItemTableViewCell{
+////            if let destination = segue.destination as? EditOrDeleteItemViewController{
+////                let order = getItemOfNum(itemNum: Int(buttonSender.restorationIdentifier!)!)
+////                destination.category = order.itemCategory
+////                destination.code = order.itemCode
+////                destination.englishName = order.itemEngName
+////                destination.chineseName = order.itemChinName
+////                destination.price = order.itemPrice
+////                destination.itemNum = Int(buttonSender.restorationIdentifier!)!
+////                destination.previousViewController = self
+////            }
+//        }
+//    }
     func resetTable(){
         listOfFilteredItemNum = filterAllItems(filtrate: filter)
         listOfFilteredItemNum = listOfFilteredItemNum.sorted()

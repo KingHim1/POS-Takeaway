@@ -139,15 +139,13 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="searchBar:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="xoY-UE-UqU"/>
-                                                                    <action selector="searchChanged:" destination="wLt-sW-mKK" eventType="editingChanged" id="Wbn-1K-KKU"/>
-                                                                    <action selector="searchChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="dDM-0T-YGQ"/>
+                                                                    <action selector="searchChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Jc1-kp-TDf"/>
                                                                 </connections>
                                                             </textField>
-                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-1t-iAe" customClass="SearchItemTableViewCell" customModule="Chine" customModuleProvider="target">
+                                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-1t-iAe">
                                                                 <rect key="frame" x="0.0" y="124" width="354" height="1886"/>
                                                                 <connections>
-                                                                    <segue destination="dAd-5i-6M9" kind="embed" id="DV7-di-hbO"/>
+                                                                    <segue destination="dAd-5i-6M9" kind="embed" identifier="searchItems" id="DV7-di-hbO"/>
                                                                 </connections>
                                                             </containerView>
                                                         </subviews>
@@ -398,7 +396,7 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="FilteredItemsListView" destination="bdd-1t-iAe" id="8Lg-ES-3ke"/>
+                        <outlet property="FilteredItemsListView" destination="bdd-1t-iAe" id="jDk-ec-NqM"/>
                         <outlet property="SearchButton" destination="VUl-XH-BKx" id="IAr-XP-OBE"/>
                         <outlet property="SearchContainerStack" destination="eLp-N0-4Bc" id="Go0-aY-9Zy"/>
                         <outlet property="categoryStack" destination="E4L-5u-Pc5" id="zVA-KI-Q5J"/>
@@ -423,25 +421,89 @@
         <scene sceneID="AOh-oc-Uwi">
             <objects>
                 <tableViewController id="dAd-5i-6M9" customClass="SearchItemTableViewController" customModule="Chine" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FOY-2a-JZm">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7eA-Zu-gyz">
                         <rect key="frame" x="0.0" y="0.0" width="354" height="1886"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="DuR-0N-BaY">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="itemCode" text="itemCode" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mbl-HS-Vg3">
+                                    <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="itemName" text="itemName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="go6-v4-dsN">
+                                    <rect key="frame" x="118" y="0.0" width="118" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="itemPrice" text="itemPrice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWm-Ld-LHd">
+                                    <rect key="frame" x="236" y="0.0" width="118" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Cr6-4g-rRc">
-                                <rect key="frame" x="0.0" y="28" width="354" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="mfQ-Qb-Add" customClass="SearchItemTableViewCell" customModule="Chine" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="58" width="354" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cr6-4g-rRc" id="jhx-Q0-APZ">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mfQ-Qb-Add" id="Uqb-9n-seB">
                                     <rect key="frame" x="0.0" y="0.0" width="354" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ArJ-xZ-DcU">
+                                            <rect key="frame" x="16" y="3" width="322" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxG-sZ-QnQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="107.5" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FM7-rg-MaE">
+                                                    <rect key="frame" x="107.5" y="0.0" width="107" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXm-IZ-Qtk">
+                                                    <rect key="frame" x="214.5" y="0.0" width="107.5" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ArJ-xZ-DcU" secondAttribute="trailing" id="Ldt-sQ-P3W"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ArJ-xZ-DcU" secondAttribute="bottom" id="MCG-y3-ifk"/>
+                                        <constraint firstItem="ArJ-xZ-DcU" firstAttribute="leading" secondItem="Uqb-9n-seB" secondAttribute="leadingMargin" id="Tuw-SC-A57"/>
+                                        <constraint firstItem="ArJ-xZ-DcU" firstAttribute="top" secondItem="Uqb-9n-seB" secondAttribute="topMargin" constant="-8" id="Xk0-3X-lJP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ItemPrice" destination="xXm-IZ-Qtk" id="EcU-8J-0iK"/>
+                                    <outlet property="itemCategory" destination="kxG-sZ-QnQ" id="5jK-qN-s0b"/>
+                                    <outlet property="itemName" destination="FM7-rg-MaE" id="9ND-u8-M5j"/>
+                                    <outlet property="itemPrice" destination="xXm-IZ-Qtk" id="uGm-MD-sSn"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="dAd-5i-6M9" id="SsG-vj-Ab4"/>
-                            <outlet property="delegate" destination="dAd-5i-6M9" id="UFU-4t-tQ5"/>
+                            <outlet property="dataSource" destination="dAd-5i-6M9" id="hYt-s9-m7B"/>
+                            <outlet property="delegate" destination="dAd-5i-6M9" id="ngG-q5-tDS"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchTable" destination="7eA-Zu-gyz" id="PLq-cA-qhM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7Q-4j-Nko" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1081,7 +1143,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BkU-lT-XVa">
                                         <rect key="frame" x="0.0" y="206" width="728" height="687.5"/>
                                         <connections>
-                                            <segue destination="FLG-X9-bRb" kind="embed" id="Ouj-yV-fc5"/>
+                                            <segue destination="FLG-X9-bRb" kind="embed" identifier="searchItems" id="Ouj-yV-fc5"/>
                                         </connections>
                                     </containerView>
                                 </subviews>

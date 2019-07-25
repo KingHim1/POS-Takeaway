@@ -34,6 +34,7 @@ class EditItemViewController: UIViewController{
                     tableVC.listOfFilteredItemNum = listOfFilteredItemNum
                     if let view = tableVC.view as? UITableView{
                         view.reloadData()
+                        print(type(of: view))
                     }
                 }
             }
