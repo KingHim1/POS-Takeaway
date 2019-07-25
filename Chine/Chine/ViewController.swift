@@ -11,6 +11,8 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var SearchButton: UIButton!
+
     @IBOutlet weak var collectionSegControl: UISegmentedControl!
     @IBAction func setAsCollection(_ sender: Any) {
         if collectionSegControl.selectedSegmentIndex == 0{
@@ -258,7 +260,14 @@ class ViewController: UIViewController {
     }
     
     private func removeCategories(){
-        categoryStack.subviews.forEach({ $0.removeFromSuperview() })
+        categoryStack.subviews.forEach({
+            if let button = $0 as? UIButton{
+                if button.currentTitle != "Search"{
+                    $0.removeFromSuperview()
+                }
+            }
+            
+        })
     }
     private func resetCategories(){
         for categories in getCategories(){
@@ -310,6 +319,68 @@ class ViewController: UIViewController {
             checkoutButton.isUserInteractionEnabled = false
         }
     }
+
+    @IBOutlet weak var SearchContainerStack: UIStackView!
+    
+    @IBAction func SearchBackButtonPress(_ sender: Any) {
+        categoryStack.isHidden = false
+        SearchContainerStack.isHidden = true
+    }
+    @IBAction func SearchButtonPress(_ sender: Any) {
+        categoryStack.isHidden = true
+        SearchContainerStack.isHidden = false
+    }
+    
+    var filter = ""
+    var listOfFilteredItemNum: [Int] = []
+    
+    
+    @IBOutlet weak var searchBar: UITextField!
+    
+    @IBAction func searchChanged(_ sender: Any) {
+        if let _filter = searchBar.text{
+            print("happy")
+            print(_filter)
+            filter = searchBar.text!
+            listOfFilteredItemNum = filterAllItems(filtrate: filter)
+            listOfFilteredItemNum = listOfFilteredItemNum.sorted()
+            print(listOfFilteredItemNum)
+            for viewControllers in self.childViewControllers{
+                if let tableVC = viewControllers as? EditItemTableViewController{
+                    tableVC.listOfFilteredItemNum = listOfFilteredItemNum
+                    if let view = tableVC.view as? UITableView{
+                        view.reloadData()
+                    }
+                }
+            }
+        }
+        else{
+            _filter = ""
+        }
+    }
+
+    
+    
+    var _filter: String{
+        get{
+            return filter
+        }
+        set{
+            filter = newValue
+            listOfFilteredItemNum = filterAllItems(filtrate: filter)
+            listOfFilteredItemNum = listOfFilteredItemNum.sorted()
+            print(listOfFilteredItemNum)
+            for viewControllers in self.childViewControllers{
+                if let tableVC = viewControllers as? EditItemTableViewController{
+                    tableVC.listOfFilteredItemNum = listOfFilteredItemNum
+                    if let view = tableVC.view as? UITableView{
+                        view.reloadData()
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
