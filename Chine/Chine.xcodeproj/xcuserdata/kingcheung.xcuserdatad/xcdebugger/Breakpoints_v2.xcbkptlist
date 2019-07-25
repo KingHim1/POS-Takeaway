@@ -35,5 +35,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chine/SearchItemTableViewCell.swift"
+            timestampString = "585766326.6864901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "SearchItemTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chine.SearchItemTableViewCell.itemCategory.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Chine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingcheung/Documents/ChineUpp/Chine/Chine/Chine/SearchItemTableViewCell.swift"
+                  timestampString = "585766327.027222"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "78">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chine.SearchItemTableViewCell.itemCategory.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Chine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingcheung/Documents/ChineUpp/Chine/Chine/Chine/SearchItemTableViewCell.swift"
+                  timestampString = "585766327.031883"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chine.SearchItemTableViewCell.itemCategory.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "Chine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingcheung/Documents/ChineUpp/Chine/Chine/Chine/SearchItemTableViewCell.swift"
+                  timestampString = "585766327.035731"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chine.SearchItemTableViewCell.itemCategory.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Chine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingcheung/Documents/ChineUpp/Chine/Chine/Chine/SearchItemTableViewCell.swift"
+                  timestampString = "585766327.03923"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chine.SearchItemTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Chine.SearchItemTableViewCell"
+                  moduleName = "Chine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingcheung/Documents/ChineUpp/Chine/Chine/Chine/SearchItemTableViewCell.swift"
+                  timestampString = "585766327.04269"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Chine.SearchItemTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Chine.SearchItemTableViewCell&gt;"
+                  moduleName = "Chine"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kingcheung/Documents/ChineUpp/Chine/Chine/Chine/SearchItemTableViewCell.swift"
+                  timestampString = "585766327.046549"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

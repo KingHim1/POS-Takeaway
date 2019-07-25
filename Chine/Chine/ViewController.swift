@@ -11,6 +11,7 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var FilteredItemsListView: UIView!
     @IBOutlet weak var SearchButton: UIButton!
 
     @IBOutlet weak var collectionSegControl: UISegmentedControl!
@@ -181,19 +182,19 @@ class ViewController: UIViewController {
     }()
 
     
-//    private lazy var orderItemsTableViewController: OrderItemsTableViewController = {
-//        // Load Storyboard
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        
-//        // Instantiate View Controller
-//        var viewController = storyboard.instantiateViewController(withIdentifier: "orderItems") as! OrderItemsTableViewController
-//        
-//        // Add View Controller as Child View Controller
-//         self.add(asChildViewController: viewController)
-//        
-//        
-//        return viewController
-//    }()
+    private lazy var SearchItemsTableViewController: SearchItemTableViewController = {
+        // Load Storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        // Instantiate View Controller
+        var viewController = storyboard.instantiateViewController(withIdentifier: "searchItems") as! SearchItemTableViewController
+        
+        // Add View Controller as Child View Controller
+         self.add(asChildViewController: viewController)
+        
+        
+        return viewController
+    }()
 
     private func add(asChildViewController viewController: UIViewController) {
         // Add Child View Controller
@@ -346,7 +347,7 @@ class ViewController: UIViewController {
             listOfFilteredItemNum = listOfFilteredItemNum.sorted()
             print(listOfFilteredItemNum)
             for viewControllers in self.childViewControllers{
-                if let tableVC = viewControllers as? EditItemTableViewController{
+                if let tableVC = viewControllers as? SearchItemTableViewController{
                     tableVC.listOfFilteredItemNum = listOfFilteredItemNum
                     if let view = tableVC.view as? UITableView{
                         view.reloadData()
@@ -371,7 +372,7 @@ class ViewController: UIViewController {
             listOfFilteredItemNum = listOfFilteredItemNum.sorted()
             print(listOfFilteredItemNum)
             for viewControllers in self.childViewControllers{
-                if let tableVC = viewControllers as? EditItemTableViewController{
+                if let tableVC = viewControllers as? SearchItemTableViewController{
                     tableVC.listOfFilteredItemNum = listOfFilteredItemNum
                     if let view = tableVC.view as? UITableView{
                         view.reloadData()
