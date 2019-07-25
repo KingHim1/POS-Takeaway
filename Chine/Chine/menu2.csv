@@ -75,7 +75,7 @@
 75,74,beef with mixed vegetables ,5.6,Beef
 76,75,beef with bamboo shoots and water chestnuts,5.6,Beef
 77,76,beef with beansprouts,5.6,Beef
-78,77,beef with mushrooms in black bean sauce ,5.6,Beef
+78,77,beef with mushrooms,5.6,Beef
 79,78,beef with pineapple ,5.6,Beef
 80,79,beef fillet in Cantonese sauce,9.8,Beef Fillet
 81,80,beef fillet with green peppers in black bean sauce,9.8,Beef Fillet
@@ -234,30 +234,27 @@
 234,230,prawn crackers,2,Extra Portions
 235,231,banana fritters,2.3,Desserts
 236,232,pineapple fritter,2.3,Desserts
-237,R1,R1,8,Round Containers
-238,R2,R2,8,Round Containers
-239,R3,R3,8,Round Containers
-240,R4,R4,8,Round Containers
-241,R5,R5,8,Round Containers
-242,R6,R6,8,Round Containers
-243,R7,R7,8,Round Containers
-244,R8,R8,8,Round Containers
-245,R9,R9,8,Round Containers
-246,R10,R10,8,Round Containers
-247,R11,R11,8,Round Containers
-248,R12,R12,8,Round Containers
-249,R13,R13,8,Round Containers
-250,R14,R14,8,Round Containers
-251,R15,R15,8,Round Containers
-252,R16,R16,8,Round Containers
-253,R17,R17,8,Round Containers
-254,R18,R18,8,Round Containers
+237,R1,R1 S&S Ch + Pk With Mush,8,Round Containers
+238,R2,R2 S&S Ch + Pk With BeanSpr,8,Round Containers
+239,R3,R3 S&S Ch + Pk With ChilBnS,8,Round Containers
+240,R4,R4 S&S Ch + Pk With Veg,8,Round Containers
+241,R5,R5 S&S Ch + Bf With Veg,8,Round Containers
+242,R6,R6 S&S Ch + Bf With BeanSpr,8,Round Containers
+243,R7,R7 S&S Ch + Bf With Mush,8,Round Containers
+244,R8,R8 S&S Ch + Bf With Pine,8,Round Containers
+245,R9,R9 S&S Ch + Bf in BlkBnS,8,Round Containers
+246,R10,R10 Ch With Veg + CurrySam,8,Round Containers
+247,R11,R11 Ch With Mush + CurrySam,8,Round Containers
+248,R12,R12 Ch With BnSpr + CurrySam,8,Round Containers
+249,R13,R13 Ch With Pine + CurrySam,8,Round Containers
+250,R14,R14 Ch in BlkBnS + CurrySam,8,Round Containers
+251,R15,R15 Sp Curry + VegSpRolls,8,Round Containers
+252,R16,R16 Ch Curry + VegSpRolls,8,Round Containers
+253,R17,R17 Pk Curry + VegSpRolls,8,Round Containers
+254,R18,R18 Bf Curry + VegSpRolls,8,Round Containers
 255,Set A,two person set meal,21,Set Meals
 256,set B,three person set meal,33,Set Meals
 257,Set C,four person set meal,46,Set Meals
-258,A1,+ FriedR(curry),1.0,Addons
-259,A2,+ Chips(curry),0.8,Addons
-260,A3,+ BoiledR(curry),0.8,Addons
 261,A4,+ Mush(curry),0.4,Addons
 262,A5,+ ThaiGrCurry(udon),1.0,Addons
 263,A6,+ Hot,0,Addons
@@ -275,3 +272,16 @@
 275,78a,beef in oyster sauce ,5.6,Beef
 276,A11,No Peas,0,Addons
 277,A12,No Onions,0,Addons,
+278,A13,Mixed Sauce,1.5,Extra Portions
+279,A14,Duck with Cashew Nuts,6.7,Duck
+280,A15,No Prawns,0,Addons
+281,A16,No Seafood,0,Addons
+282,A16,Egg Allergy,0,Addons
+283,A17,Nut Allergy,0,Addons
+284,A18,MSG Allergy,0,Addons
+285,A19,Gluten Free,0,Addons
+286,A20,Beef Ho Fun,8,Noodle
+287,A21,Sp Crisp Nood,9,Noodle
+288,A22,Ch Crisp Nood,9,Noodle
+289,A23,Pak Choi,5,Vegetarian
+290,A24,Choi Sum,6,Vegetarian

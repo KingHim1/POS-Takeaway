@@ -10,23 +10,23 @@ import UIKit
 
 class OrderListTableViewController: UITableViewController{
     
-    @IBOutlet weak var total: UILabel!
-    func setTotalPriceLabel(){
-        let allPrices = getAllOrderPrices()
-        var totalM: Float = 0
-        for price in allPrices{
-            totalM += Float(price)!
-        }
-        total.text = "£"+String(totalM)
-    }
+//    @IBOutlet weak var total: UILabel!
+//    func setTotalPriceLabel(){
+//        let allPrices = getAllOrderPrices()
+//        var totalM: Float = 0
+//        for price in allPrices{
+//            totalM += Float(price)!
+//        }
+//        total.text = "£"+String(totalM)
+//    }
     
     override func viewDidLoad() {
-        let allPrices = getAllOrderPrices()
-        var totalM: Float = 0
-        for price in allPrices{
-            totalM += Float(price)!
-        }
-        total.text = "£"+String(totalM)
+//        let allPrices = getAllOrderPrices()
+//        var totalM: Float = 0
+//        for price in allPrices{
+//            totalM += Float(price)!
+//        }
+//        total.text = "£"+String(totalM)
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1

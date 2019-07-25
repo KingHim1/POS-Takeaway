@@ -9,5 +9,6 @@
 import UIKit
 
 class ConfigurationViewController: UITabBarController{
-
+    @IBOutlet var tabBarControl: UITabBar!
+    
 }

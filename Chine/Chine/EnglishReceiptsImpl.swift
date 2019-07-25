@@ -133,6 +133,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         dateFormatterCollect.locale = Locale(identifier: "en_GB")
 //        dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: 0 + timeTilCol * 60)
         dateFormatterCollect.dateFormat = "hh:mma"
+        dateFormatterCollect.timeZone = TimeZone(secondsFromGMT: TimeZone.current.secondsFromGMT())
         let itemNumbers = order.1
         let itemQuantity = order.10
         let itemComments = order.6
@@ -221,11 +222,11 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
             x = x + 1
             
         }
-//        let pricePadding = "------------------------"
-//        if order.3 >= 25{
-//            builder.appendData(withMultiple: (("Prawn Crackers\n").data(using: encoding)), width: 2, height: 2)
-//            builder.appendData(withMultiple: (pricePadding.data(using: encoding)), width: 2, height: 2)
-//        }
+        let pricePadding = "------------------------"
+        if order.3 >= 25{
+            builder.appendData(withMultiple: (("Prawn Crackers\n").data(using: encoding)), width: 2, height: 2)
+            builder.appendData(withMultiple: (pricePadding.data(using: encoding)), width: 2, height: 2)
+        }
         
         builder.appendData(withMultiple: "Total ".data(using: encoding), width: 2, height: 2)
         let orderTotalLength = String(order.3).count

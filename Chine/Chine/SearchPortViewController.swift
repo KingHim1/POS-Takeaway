@@ -9,6 +9,16 @@
 import UIKit
 
 class SearchPortViewController: CommonViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
+    @IBOutlet weak var total: UILabel!
+    func setTotalPriceLabel(){
+        let allPrices = getAllOrderPrices()
+        var totalM: Float = 0
+        for price in allPrices{
+            totalM += Float(price)!
+        }
+        total.text = "£"+String(totalM)
+    }
+    
     enum CellParamIndex: Int {
         case portName = 0
         case modelName
@@ -51,6 +61,14 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
         self.selectedIndexPath = nil
         
         self.didAppear = false
+        
+        self.setTotalPriceLabel()
+        let allPrices = getAllOrderPrices()
+        var totalM: Float = 0
+        for price in allPrices{
+            totalM += Float(price)!
+        }
+        total.text = "£"+String(totalM)
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,7 +78,7 @@ class SearchPortViewController: CommonViewController, UITableViewDelegate, UITab
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        self.setTotalPriceLabel()
         if didAppear == false {
             self.refreshPortInfo()
             

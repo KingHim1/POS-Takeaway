@@ -177,7 +177,7 @@ class ViewController: UIViewController {
         
         return viewController
     }()
-    
+
     
 //    private lazy var orderItemsTableViewController: OrderItemsTableViewController = {
 //        // Load Storyboard
@@ -241,7 +241,7 @@ class ViewController: UIViewController {
                     aview.reloadData()
                 }
             }
-            orderListTableViewController.setTotalPriceLabel()
+//            orderListTableViewController.setTotalPriceLabel()
             add(asChildViewController: orderListTableViewController)
             
             }
