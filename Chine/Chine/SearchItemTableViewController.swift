@@ -46,14 +46,15 @@ class SearchItemTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> SearchItemTableViewCell {
         print("setting up table")
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: "cell",
+            withIdentifier: "filteredCell",
             for: indexPath) as! SearchItemTableViewCell
         let row = indexPath.row
         let order = getItemOfNum(itemNum: listOfFilteredItemNum[row])
         cell.itemCategory.text = order.itemCategory
 //        cell.itemCode.text = order.itemCode
-        cell.itemEngName.text = order.itemEngName
+        cell.itemName.text = order.itemEngName
 //        cell.itemChinName.text = order.itemChinName
+        cell.tag = Int(order.itemNum)
         cell.itemPrice.text = String(order.itemPrice)
         cell.restorationIdentifier = String(listOfFilteredItemNum[row])
         //        editThisItem = (order.itemNum, order.itemCategory, order.itemCode, order.itemEngName, order.itemChinName, order.itemPrice)
@@ -61,6 +62,17 @@ class SearchItemTableViewController: UITableViewController{
         return cell
         
     }
+    
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        let cell = tableView.cellForRow(at: indexPath)
+        print(cell!.tag)
+        if let parent = self.parent as? ViewController{
+            parent.addItemToOrderFromSearch(tag: cell!.tag)
+        }
+        print(type(of: self.parent))
+    }
+    
+    
     @IBOutlet var orderItems: UITableView!
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let buttonSender = sender as? SearchItemTableViewCell{

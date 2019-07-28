@@ -14,7 +14,7 @@ class SearchItemTableViewCell: UITableViewCell{
     @IBOutlet weak var itemCategory: UILabel!
     //    @IBOutlet weak var itemCode: UILabel!
     //    @IBOutlet weak var itemChinName: UILabel!
-    @IBOutlet weak var itemEngName: UILabel!
+    @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
     
 }

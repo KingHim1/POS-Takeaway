@@ -306,6 +306,27 @@ class ViewController: UIViewController {
         
         _price = newOrder.sharedInstance.getPrice()
     }
+    
+    func addItemToOrderFromSearch(tag: Int){
+        newOrder.sharedInstance.addItem(itemNum: tag)
+        print("items in new order= \(newOrder.sharedInstance.getNumItemsInNewOrder())")
+        self.view.setNeedsDisplay()
+        
+        
+        for subview in newOrderTable.subviews{
+            if let aview = subview as? UITableView{
+                aview.reloadData()
+                let numberOfRows = aview.numberOfRows(inSection: 0)
+                let indexPath = IndexPath(row: numberOfRows-1, section: 0)
+                aview.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                aview.indexPath
+            }
+        }
+        
+        
+        _price = newOrder.sharedInstance.getPrice()
+        
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? CheckPrintViewController{
             destination.previousView = newOrderTable
@@ -349,14 +370,17 @@ class ViewController: UIViewController {
             listOfFilteredItemNum = listOfFilteredItemNum.sorted()
             print(listOfFilteredItemNum)
             for viewControllers in self.childViewControllers{
+                print(type(of: viewControllers.view))
                 print(type(of: viewControllers))
                 if let tableVC = viewControllers as? SearchItemTableViewController{
                     print("Search found")
                     tableVC.listOfFilteredItemNum = listOfFilteredItemNum
-                    if let view = tableVC.view as? UITableView{
-                        view.reloadData()
-                    }
-                    print(type(of: tableVC.view))
+                    tableVC.tableView.reloadData()
+//                    if let view = tableVC.view as? UITableView{
+////                        view.reloadData()
+//                        self.view.setNeedsDisplay()
+//                    }
+//                    print(type(of: tableVC.view))
                 }
             }
         }
