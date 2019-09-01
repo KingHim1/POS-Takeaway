@@ -191,7 +191,7 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
                  itemChinName.append(")")
             }
            
-            
+            price = ((price * 10).rounded() / 10)
             let priceStr = String(price)
             let priceLength = priceStr.count
 //            let engName = String(getItemName(Int16(item)))
@@ -234,7 +234,9 @@ class EnglishReceiptsImpl: ILocalizeReceipts {
         for _ in 0..<(17-orderTotalLength){
             totalPadding += " "
         }
-        builder.appendData(withMultiple: "\(totalPadding)£\(order.3)\n\n".data(using: encoding), width: 2, height: 2)
+        var fullPrice = order.3
+        fullPrice = ((fullPrice * 100).rounded() / 100)
+        builder.appendData(withMultiple: "\(totalPadding)£\(fullPrice)\n\n".data(using: encoding), width: 2, height: 2)
         
 //      Set time to be new Plus the collection time
         date.addTimeInterval(Double(timeTilCol) * 60.0)

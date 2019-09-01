@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         }
         set{
             price = newValue
-            priceLabel.text = "£" + String((newValue * 100).rounded()/100)
+            priceLabel.text = "£" + String((newValue * 10).rounded()/10)
             checkOutButtonCheck()
         }
     }
@@ -115,7 +115,7 @@ class ViewController: UIViewController {
         removeCategories()
         resetCategories()
         checkoutButton.isUserInteractionEnabled = false
-        stepperUI.stepValue = 10
+        stepperUI.stepValue = 5
         stepperUI.value = 0
         stepperUI.minimumValue = 0
     }
@@ -230,7 +230,7 @@ class ViewController: UIViewController {
             else{
                 remove(asChildViewController: configController)
             }
-            viewController._price = newOrder.sharedInstance.getPrice()
+            viewController._price = ((newOrder.sharedInstance.getPrice() * 10).rounded() / 10 )
             add(asChildViewController: viewController)
         } else if segmentedControl.selectedSegmentIndex == 1 {
             if self.presentingViewController == viewController {
